@@ -8,7 +8,7 @@ Interactive GitHub Pages site for exploring reported crime trends across Chicago
 - Linked 36-month district trend chart
 - Year controls for the map
 - District totals, monthly averages, peak-month summaries, and 2022–2024 change
-- Selected figures and the complete analysis report
+- Selected figures from the accompanying analysis
 - Responsive keyboard- and touch-friendly interface
 
 ## Data
