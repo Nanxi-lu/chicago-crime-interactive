@@ -226,8 +226,71 @@ h3 {
 
 .explorer,
 .analysis,
-.method {
+.method,
+.context {
   padding: 36px 0 clamp(72px, 10vw, 140px);
+}
+
+.context {
+  padding-top: 0;
+}
+
+.context-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.context-card {
+  padding: 26px 26px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(160deg, rgba(255, 180, 84, 0.06), transparent 40%),
+    var(--panel);
+}
+
+.context-year {
+  margin: 0 0 10px;
+  color: var(--amber);
+  font: 700 0.8rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.12em;
+}
+
+.context-card h3 {
+  margin-bottom: 10px;
+}
+
+.context-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.context-sources {
+  margin-top: 14px !important;
+  color: var(--faint) !important;
+  font-size: 0.78rem;
+}
+
+.context-sources a {
+  color: var(--cyan-soft);
+}
+
+.context-tip {
+  max-width: 720px;
+  margin: 22px 0 0;
+  padding: 14px 18px;
+  border-left: 3px solid var(--cyan);
+  background: rgba(56, 214, 198, 0.06);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.context-tip a {
+  color: var(--cyan-soft);
 }
 
 .explorer-heading,
@@ -964,7 +1027,7 @@ select {
 
 .model-metric {
   display: grid;
-  grid-template-columns: 62px 1fr 44px;
+  grid-template-columns: 78px 1fr 44px;
   gap: 10px;
   align-items: center;
   font-size: 0.74rem;
@@ -1014,6 +1077,10 @@ select {
 
 .method .section-heading {
   display: block;
+}
+
+.method .section-heading .section-index {
+  margin-bottom: 12px;
 }
 
 .method-grid {
@@ -1196,7 +1263,8 @@ footer p {
     margin-bottom: 0;
   }
 
-  .method-grid {
+  .method-grid,
+  .context-grid {
     grid-template-columns: 1fr;
   }
 
