@@ -28,4 +28,4 @@ Then open `http://localhost:8000`.
 
 ## GitHub Pages
 
-In the repository settings, choose **Pages → Deploy from a branch**, then publish the root of the `main` branch.
+Every push to `main` deploys the site via the workflow in `.github/workflows/pages.yml`. Live at https://nanxi-lu.github.io/chicago-crime-interactive/
