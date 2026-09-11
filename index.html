@@ -79,19 +79,27 @@
               <p id="map-period" class="period-label">2022–2024</p>
             </div>
             <div id="district-map" class="map"></div>
+            <div class="map-selection" aria-live="polite">
+              <span class="map-selection-dot" aria-hidden="true"></span>
+              <span>
+                <strong id="map-selection-name">—</strong>
+                <small id="map-selection-total">Select a district</small>
+              </span>
+            </div>
             <div class="legend" aria-label="Map colour legend">
               <span>Fewer</span>
               <span class="legend-ramp" aria-hidden="true"></span>
               <span>More</span>
             </div>
-            <p class="map-instruction">Click a district to update the trend.</p>
+            <p class="map-instruction">Click a district to see its full profile.</p>
           </article>
 
-          <article class="trend-card panel" aria-labelledby="trend-title">
+          <article class="trend-card panel" aria-labelledby="trend-title" aria-live="polite">
             <div class="panel-heading trend-heading">
               <div>
                 <p class="panel-label">Monthly trend</p>
-                <h3 id="trend-title"><span id="district-name">District —</span></h3>
+                <p class="district-number" id="district-number">District —</p>
+                <h3 id="trend-title"><span id="district-name">—</span></h3>
               </div>
               <p id="trend-direction" class="trend-pill">Loading</p>
             </div>
@@ -108,6 +116,36 @@
               <div class="stat">
                 <span class="stat-label">Peak month</span>
                 <strong id="peak-month">—</strong>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Lowest month</span>
+                <strong id="lowest-month">—</strong>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Citywide share</span>
+                <strong id="city-share">—</strong>
+              </div>
+              <div class="stat">
+                <span class="stat-label">District rank</span>
+                <strong id="district-rank">—</strong>
+              </div>
+            </div>
+
+            <div class="year-breakdown" aria-label="Yearly district totals">
+              <div class="year-row">
+                <span>2022</span>
+                <span class="year-track"><span id="year-bar-2022" class="year-bar"></span></span>
+                <strong id="year-total-2022">—</strong>
+              </div>
+              <div class="year-row">
+                <span>2023</span>
+                <span class="year-track"><span id="year-bar-2023" class="year-bar"></span></span>
+                <strong id="year-total-2023">—</strong>
+              </div>
+              <div class="year-row">
+                <span>2024</span>
+                <span class="year-track"><span id="year-bar-2024" class="year-bar"></span></span>
+                <strong id="year-total-2024">—</strong>
               </div>
             </div>
 
@@ -197,6 +235,7 @@
             <p>
               <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2" rel="noreferrer">Crimes — 2001 to Present</a><br />
               <a href="https://data.cityofchicago.org/Public-Safety/Boundaries-Police-Districts-current-/fthy-xz3r" rel="noreferrer">Police district boundaries</a><br />
+              <a href="https://www.chicagopolice.org/wp-content/uploads/2024-CPD-Annual-Report-Final-For-Publishing.pdf" rel="noreferrer">Official district names</a><br />
             </p>
           </div>
         </div>
