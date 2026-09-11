@@ -1,0 +1,5114 @@
+[
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 1,
+    "incidents": 924
+  },
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 2,
+    "incidents": 804
+  },
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 3,
+    "incidents": 1041
+  },
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 4,
+    "incidents": 947
+  },
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 5,
+    "incidents": 1071
+  },
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 6,
+    "incidents": 1139
+  },
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 7,
+    "incidents": 1696
+  },
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 8,
+    "incidents": 1188
+  },
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1083
+  },
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 10,
+    "incidents": 1132
+  },
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 11,
+    "incidents": 1096
+  },
+  {
+    "district": "1",
+    "year": 2022,
+    "month": 12,
+    "incidents": 994
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 1,
+    "incidents": 1105
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 2,
+    "incidents": 951
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 3,
+    "incidents": 1130
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1112
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1193
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1231
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1249
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1557
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1276
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1184
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 11,
+    "incidents": 1187
+  },
+  {
+    "district": "1",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1198
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 1,
+    "incidents": 1083
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 2,
+    "incidents": 1098
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 3,
+    "incidents": 1207
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 4,
+    "incidents": 1152
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 5,
+    "incidents": 1324
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1332
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1419
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1435
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 9,
+    "incidents": 1288
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 10,
+    "incidents": 1365
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 11,
+    "incidents": 1094
+  },
+  {
+    "district": "1",
+    "year": 2024,
+    "month": 12,
+    "incidents": 1116
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 1,
+    "incidents": 639
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 2,
+    "incidents": 662
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 3,
+    "incidents": 822
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 4,
+    "incidents": 760
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 5,
+    "incidents": 808
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 6,
+    "incidents": 985
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 7,
+    "incidents": 925
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 8,
+    "incidents": 896
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1005
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 10,
+    "incidents": 958
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 11,
+    "incidents": 831
+  },
+  {
+    "district": "10",
+    "year": 2022,
+    "month": 12,
+    "incidents": 746
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 1,
+    "incidents": 847
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 2,
+    "incidents": 755
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 3,
+    "incidents": 867
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 4,
+    "incidents": 902
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 5,
+    "incidents": 956
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1025
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1062
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1027
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 9,
+    "incidents": 902
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 10,
+    "incidents": 988
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 11,
+    "incidents": 875
+  },
+  {
+    "district": "10",
+    "year": 2023,
+    "month": 12,
+    "incidents": 874
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 1,
+    "incidents": 849
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 2,
+    "incidents": 865
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 3,
+    "incidents": 830
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 4,
+    "incidents": 863
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 5,
+    "incidents": 934
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 6,
+    "incidents": 977
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 7,
+    "incidents": 983
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 8,
+    "incidents": 875
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 9,
+    "incidents": 915
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 10,
+    "incidents": 866
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 11,
+    "incidents": 815
+  },
+  {
+    "district": "10",
+    "year": 2024,
+    "month": 12,
+    "incidents": 789
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 1,
+    "incidents": 830
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 2,
+    "incidents": 944
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 3,
+    "incidents": 1087
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 4,
+    "incidents": 1151
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 5,
+    "incidents": 1189
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 6,
+    "incidents": 1127
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 7,
+    "incidents": 1211
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 8,
+    "incidents": 1183
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1196
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 10,
+    "incidents": 1361
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 11,
+    "incidents": 1151
+  },
+  {
+    "district": "11",
+    "year": 2022,
+    "month": 12,
+    "incidents": 1106
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 1,
+    "incidents": 1213
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 2,
+    "incidents": 1002
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 3,
+    "incidents": 1132
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1109
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1140
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1370
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1386
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1243
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1274
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1205
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 11,
+    "incidents": 1209
+  },
+  {
+    "district": "11",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1167
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 1,
+    "incidents": 1079
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 2,
+    "incidents": 1047
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 3,
+    "incidents": 1148
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 4,
+    "incidents": 1043
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 5,
+    "incidents": 1165
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1237
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1272
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1321
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 9,
+    "incidents": 1189
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 10,
+    "incidents": 1084
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 11,
+    "incidents": 1020
+  },
+  {
+    "district": "11",
+    "year": 2024,
+    "month": 12,
+    "incidents": 1063
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 1,
+    "incidents": 882
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 2,
+    "incidents": 917
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 3,
+    "incidents": 1127
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 4,
+    "incidents": 975
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 5,
+    "incidents": 1136
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 6,
+    "incidents": 1319
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 7,
+    "incidents": 1279
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 8,
+    "incidents": 1313
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1351
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 10,
+    "incidents": 1370
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 11,
+    "incidents": 1453
+  },
+  {
+    "district": "12",
+    "year": 2022,
+    "month": 12,
+    "incidents": 1301
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 1,
+    "incidents": 1338
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 2,
+    "incidents": 1087
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 3,
+    "incidents": 1288
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1269
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1304
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1365
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1411
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1477
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1379
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1414
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 11,
+    "incidents": 1368
+  },
+  {
+    "district": "12",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1285
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 1,
+    "incidents": 1144
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 2,
+    "incidents": 1228
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 3,
+    "incidents": 1299
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 4,
+    "incidents": 1231
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 5,
+    "incidents": 1409
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1446
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1529
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1457
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 9,
+    "incidents": 1514
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 10,
+    "incidents": 1466
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 11,
+    "incidents": 1238
+  },
+  {
+    "district": "12",
+    "year": 2024,
+    "month": 12,
+    "incidents": 1253
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 1,
+    "incidents": 496
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 2,
+    "incidents": 506
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 3,
+    "incidents": 732
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 4,
+    "incidents": 579
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 5,
+    "incidents": 635
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 6,
+    "incidents": 738
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 7,
+    "incidents": 732
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 8,
+    "incidents": 737
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 9,
+    "incidents": 793
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 10,
+    "incidents": 858
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 11,
+    "incidents": 729
+  },
+  {
+    "district": "14",
+    "year": 2022,
+    "month": 12,
+    "incidents": 661
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 1,
+    "incidents": 679
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 2,
+    "incidents": 599
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 3,
+    "incidents": 759
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 4,
+    "incidents": 775
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 5,
+    "incidents": 773
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 6,
+    "incidents": 771
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 7,
+    "incidents": 876
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 8,
+    "incidents": 859
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 9,
+    "incidents": 821
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 10,
+    "incidents": 815
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 11,
+    "incidents": 824
+  },
+  {
+    "district": "14",
+    "year": 2023,
+    "month": 12,
+    "incidents": 818
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 1,
+    "incidents": 743
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 2,
+    "incidents": 754
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 3,
+    "incidents": 709
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 4,
+    "incidents": 698
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 5,
+    "incidents": 925
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 6,
+    "incidents": 863
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 7,
+    "incidents": 912
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 8,
+    "incidents": 879
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 9,
+    "incidents": 936
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 10,
+    "incidents": 965
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 11,
+    "incidents": 789
+  },
+  {
+    "district": "14",
+    "year": 2024,
+    "month": 12,
+    "incidents": 729
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 1,
+    "incidents": 523
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 2,
+    "incidents": 557
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 3,
+    "incidents": 627
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 4,
+    "incidents": 698
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 5,
+    "incidents": 727
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 6,
+    "incidents": 679
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 7,
+    "incidents": 742
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 8,
+    "incidents": 833
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 9,
+    "incidents": 890
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 10,
+    "incidents": 855
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 11,
+    "incidents": 617
+  },
+  {
+    "district": "15",
+    "year": 2022,
+    "month": 12,
+    "incidents": 593
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 1,
+    "incidents": 643
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 2,
+    "incidents": 551
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 3,
+    "incidents": 719
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 4,
+    "incidents": 684
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 5,
+    "incidents": 771
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 6,
+    "incidents": 740
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 7,
+    "incidents": 729
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 8,
+    "incidents": 736
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 9,
+    "incidents": 674
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 10,
+    "incidents": 695
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 11,
+    "incidents": 654
+  },
+  {
+    "district": "15",
+    "year": 2023,
+    "month": 12,
+    "incidents": 686
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 1,
+    "incidents": 626
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 2,
+    "incidents": 645
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 3,
+    "incidents": 703
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 4,
+    "incidents": 714
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 5,
+    "incidents": 799
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 6,
+    "incidents": 833
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 7,
+    "incidents": 798
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 8,
+    "incidents": 721
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 9,
+    "incidents": 727
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 10,
+    "incidents": 785
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 11,
+    "incidents": 707
+  },
+  {
+    "district": "15",
+    "year": 2024,
+    "month": 12,
+    "incidents": 717
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 1,
+    "incidents": 570
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 2,
+    "incidents": 588
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 3,
+    "incidents": 742
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 4,
+    "incidents": 672
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 5,
+    "incidents": 787
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 6,
+    "incidents": 761
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 7,
+    "incidents": 842
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 8,
+    "incidents": 845
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 9,
+    "incidents": 827
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 10,
+    "incidents": 965
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 11,
+    "incidents": 828
+  },
+  {
+    "district": "16",
+    "year": 2022,
+    "month": 12,
+    "incidents": 870
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 1,
+    "incidents": 834
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 2,
+    "incidents": 705
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 3,
+    "incidents": 794
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 4,
+    "incidents": 737
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 5,
+    "incidents": 865
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 6,
+    "incidents": 854
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 7,
+    "incidents": 878
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 8,
+    "incidents": 874
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 9,
+    "incidents": 777
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 10,
+    "incidents": 893
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 11,
+    "incidents": 832
+  },
+  {
+    "district": "16",
+    "year": 2023,
+    "month": 12,
+    "incidents": 763
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 1,
+    "incidents": 722
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 2,
+    "incidents": 740
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 3,
+    "incidents": 755
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 4,
+    "incidents": 768
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 5,
+    "incidents": 773
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 6,
+    "incidents": 835
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 7,
+    "incidents": 808
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 8,
+    "incidents": 790
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 9,
+    "incidents": 819
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 10,
+    "incidents": 765
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 11,
+    "incidents": 654
+  },
+  {
+    "district": "16",
+    "year": 2024,
+    "month": 12,
+    "incidents": 662
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 1,
+    "incidents": 431
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 2,
+    "incidents": 476
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 3,
+    "incidents": 536
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 4,
+    "incidents": 497
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 5,
+    "incidents": 579
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 6,
+    "incidents": 563
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 7,
+    "incidents": 619
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 8,
+    "incidents": 629
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 9,
+    "incidents": 624
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 10,
+    "incidents": 715
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 11,
+    "incidents": 659
+  },
+  {
+    "district": "17",
+    "year": 2022,
+    "month": 12,
+    "incidents": 699
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 1,
+    "incidents": 651
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 2,
+    "incidents": 582
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 3,
+    "incidents": 628
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 4,
+    "incidents": 611
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 5,
+    "incidents": 654
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 6,
+    "incidents": 622
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 7,
+    "incidents": 669
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 8,
+    "incidents": 675
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 9,
+    "incidents": 711
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 10,
+    "incidents": 715
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 11,
+    "incidents": 641
+  },
+  {
+    "district": "17",
+    "year": 2023,
+    "month": 12,
+    "incidents": 712
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 1,
+    "incidents": 575
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 2,
+    "incidents": 630
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 3,
+    "incidents": 638
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 4,
+    "incidents": 655
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 5,
+    "incidents": 746
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 6,
+    "incidents": 685
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 7,
+    "incidents": 729
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 8,
+    "incidents": 653
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 9,
+    "incidents": 731
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 10,
+    "incidents": 709
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 11,
+    "incidents": 617
+  },
+  {
+    "district": "17",
+    "year": 2024,
+    "month": 12,
+    "incidents": 632
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 1,
+    "incidents": 848
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 2,
+    "incidents": 775
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 3,
+    "incidents": 967
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 4,
+    "incidents": 861
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 5,
+    "incidents": 1125
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 6,
+    "incidents": 1129
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 7,
+    "incidents": 1317
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 8,
+    "incidents": 1212
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1174
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 10,
+    "incidents": 1084
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 11,
+    "incidents": 1055
+  },
+  {
+    "district": "18",
+    "year": 2022,
+    "month": 12,
+    "incidents": 953
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 1,
+    "incidents": 1079
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 2,
+    "incidents": 959
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 3,
+    "incidents": 1100
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1004
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1071
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1040
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1305
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1259
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1192
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1194
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 11,
+    "incidents": 1031
+  },
+  {
+    "district": "18",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1101
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 1,
+    "incidents": 1051
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 2,
+    "incidents": 973
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 3,
+    "incidents": 1037
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 4,
+    "incidents": 1061
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 5,
+    "incidents": 1284
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1195
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1270
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1237
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 9,
+    "incidents": 1168
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 10,
+    "incidents": 1179
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 11,
+    "incidents": 1092
+  },
+  {
+    "district": "18",
+    "year": 2024,
+    "month": 12,
+    "incidents": 1028
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 1,
+    "incidents": 717
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 2,
+    "incidents": 695
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 3,
+    "incidents": 897
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 4,
+    "incidents": 909
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 5,
+    "incidents": 988
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 6,
+    "incidents": 1270
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 7,
+    "incidents": 1289
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 8,
+    "incidents": 1155
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1197
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 10,
+    "incidents": 1181
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 11,
+    "incidents": 1015
+  },
+  {
+    "district": "19",
+    "year": 2022,
+    "month": 12,
+    "incidents": 1009
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 1,
+    "incidents": 1012
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 2,
+    "incidents": 850
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 3,
+    "incidents": 1015
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1050
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1131
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1355
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1259
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1363
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1244
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1271
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 11,
+    "incidents": 1114
+  },
+  {
+    "district": "19",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1094
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 1,
+    "incidents": 924
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 2,
+    "incidents": 1010
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 3,
+    "incidents": 1109
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 4,
+    "incidents": 1075
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 5,
+    "incidents": 1271
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1411
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1354
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1335
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 9,
+    "incidents": 1285
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 10,
+    "incidents": 1198
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 11,
+    "incidents": 1074
+  },
+  {
+    "district": "19",
+    "year": 2024,
+    "month": 12,
+    "incidents": 1085
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 1,
+    "incidents": 777
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 2,
+    "incidents": 764
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 3,
+    "incidents": 857
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 4,
+    "incidents": 848
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 5,
+    "incidents": 929
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 6,
+    "incidents": 1067
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 7,
+    "incidents": 1129
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 8,
+    "incidents": 1113
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1058
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 10,
+    "incidents": 1132
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 11,
+    "incidents": 1079
+  },
+  {
+    "district": "2",
+    "year": 2022,
+    "month": 12,
+    "incidents": 1097
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 1,
+    "incidents": 1159
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 2,
+    "incidents": 933
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 3,
+    "incidents": 932
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1151
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1195
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1246
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1333
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1306
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1154
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1090
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 11,
+    "incidents": 1031
+  },
+  {
+    "district": "2",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1053
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 1,
+    "incidents": 996
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 2,
+    "incidents": 989
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 3,
+    "incidents": 975
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 4,
+    "incidents": 982
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 5,
+    "incidents": 1091
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1212
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1186
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1283
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 9,
+    "incidents": 1171
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 10,
+    "incidents": 1224
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 11,
+    "incidents": 1025
+  },
+  {
+    "district": "2",
+    "year": 2024,
+    "month": 12,
+    "incidents": 1057
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 1,
+    "incidents": 336
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 2,
+    "incidents": 296
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 3,
+    "incidents": 378
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 4,
+    "incidents": 347
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 5,
+    "incidents": 440
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 6,
+    "incidents": 445
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 7,
+    "incidents": 387
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 8,
+    "incidents": 513
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 9,
+    "incidents": 468
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 10,
+    "incidents": 536
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 11,
+    "incidents": 413
+  },
+  {
+    "district": "20",
+    "year": 2022,
+    "month": 12,
+    "incidents": 433
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 1,
+    "incidents": 475
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 2,
+    "incidents": 411
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 3,
+    "incidents": 424
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 4,
+    "incidents": 404
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 5,
+    "incidents": 467
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 6,
+    "incidents": 454
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 7,
+    "incidents": 520
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 8,
+    "incidents": 509
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 9,
+    "incidents": 529
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 10,
+    "incidents": 487
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 11,
+    "incidents": 460
+  },
+  {
+    "district": "20",
+    "year": 2023,
+    "month": 12,
+    "incidents": 457
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 1,
+    "incidents": 450
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 2,
+    "incidents": 413
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 3,
+    "incidents": 484
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 4,
+    "incidents": 510
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 5,
+    "incidents": 490
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 6,
+    "incidents": 458
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 7,
+    "incidents": 508
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 8,
+    "incidents": 497
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 9,
+    "incidents": 486
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 10,
+    "incidents": 525
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 11,
+    "incidents": 470
+  },
+  {
+    "district": "20",
+    "year": 2024,
+    "month": 12,
+    "incidents": 393
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 1,
+    "incidents": 518
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 2,
+    "incidents": 485
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 3,
+    "incidents": 589
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 4,
+    "incidents": 574
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 5,
+    "incidents": 612
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 6,
+    "incidents": 610
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 7,
+    "incidents": 684
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 8,
+    "incidents": 730
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 9,
+    "incidents": 707
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 10,
+    "incidents": 809
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 11,
+    "incidents": 756
+  },
+  {
+    "district": "22",
+    "year": 2022,
+    "month": 12,
+    "incidents": 651
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 1,
+    "incidents": 738
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 2,
+    "incidents": 640
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 3,
+    "incidents": 679
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 4,
+    "incidents": 722
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 5,
+    "incidents": 701
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 6,
+    "incidents": 712
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 7,
+    "incidents": 717
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 8,
+    "incidents": 750
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 9,
+    "incidents": 663
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 10,
+    "incidents": 684
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 11,
+    "incidents": 640
+  },
+  {
+    "district": "22",
+    "year": 2023,
+    "month": 12,
+    "incidents": 628
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 1,
+    "incidents": 577
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 2,
+    "incidents": 609
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 3,
+    "incidents": 671
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 4,
+    "incidents": 647
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 5,
+    "incidents": 714
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 6,
+    "incidents": 764
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 7,
+    "incidents": 751
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 8,
+    "incidents": 730
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 9,
+    "incidents": 688
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 10,
+    "incidents": 676
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 11,
+    "incidents": 587
+  },
+  {
+    "district": "22",
+    "year": 2024,
+    "month": 12,
+    "incidents": 571
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 1,
+    "incidents": 662
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 2,
+    "incidents": 511
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 3,
+    "incidents": 572
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 4,
+    "incidents": 616
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 5,
+    "incidents": 771
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 6,
+    "incidents": 742
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 7,
+    "incidents": 769
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 8,
+    "incidents": 799
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 9,
+    "incidents": 849
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 10,
+    "incidents": 805
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 11,
+    "incidents": 697
+  },
+  {
+    "district": "24",
+    "year": 2022,
+    "month": 12,
+    "incidents": 719
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 1,
+    "incidents": 705
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 2,
+    "incidents": 651
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 3,
+    "incidents": 715
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 4,
+    "incidents": 670
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 5,
+    "incidents": 779
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 6,
+    "incidents": 811
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 7,
+    "incidents": 834
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 8,
+    "incidents": 901
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 9,
+    "incidents": 855
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 10,
+    "incidents": 788
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 11,
+    "incidents": 781
+  },
+  {
+    "district": "24",
+    "year": 2023,
+    "month": 12,
+    "incidents": 887
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 1,
+    "incidents": 816
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 2,
+    "incidents": 772
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 3,
+    "incidents": 809
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 4,
+    "incidents": 753
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 5,
+    "incidents": 774
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 6,
+    "incidents": 713
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 7,
+    "incidents": 763
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 8,
+    "incidents": 717
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 9,
+    "incidents": 762
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 10,
+    "incidents": 678
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 11,
+    "incidents": 662
+  },
+  {
+    "district": "24",
+    "year": 2024,
+    "month": 12,
+    "incidents": 612
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 1,
+    "incidents": 781
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 2,
+    "incidents": 798
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 3,
+    "incidents": 873
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 4,
+    "incidents": 924
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 5,
+    "incidents": 1025
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 6,
+    "incidents": 929
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 7,
+    "incidents": 1054
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 8,
+    "incidents": 1160
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1089
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 10,
+    "incidents": 1235
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 11,
+    "incidents": 1118
+  },
+  {
+    "district": "25",
+    "year": 2022,
+    "month": 12,
+    "incidents": 1035
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 1,
+    "incidents": 1083
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 2,
+    "incidents": 950
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 3,
+    "incidents": 1122
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1131
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1242
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1125
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1201
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1324
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1192
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1300
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 11,
+    "incidents": 1194
+  },
+  {
+    "district": "25",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1179
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 1,
+    "incidents": 1042
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 2,
+    "incidents": 1081
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 3,
+    "incidents": 1070
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 4,
+    "incidents": 1069
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 5,
+    "incidents": 1119
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1200
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1239
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1103
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 9,
+    "incidents": 1206
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 10,
+    "incidents": 1129
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 11,
+    "incidents": 996
+  },
+  {
+    "district": "25",
+    "year": 2024,
+    "month": 12,
+    "incidents": 1033
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 1,
+    "incidents": 816
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 2,
+    "incidents": 710
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 3,
+    "incidents": 930
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 4,
+    "incidents": 916
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 5,
+    "incidents": 1018
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 6,
+    "incidents": 1029
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 7,
+    "incidents": 1084
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 8,
+    "incidents": 1189
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1153
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 10,
+    "incidents": 1136
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 11,
+    "incidents": 993
+  },
+  {
+    "district": "3",
+    "year": 2022,
+    "month": 12,
+    "incidents": 997
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 1,
+    "incidents": 1139
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 2,
+    "incidents": 963
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 3,
+    "incidents": 1086
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1015
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1096
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1152
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1218
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1216
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1095
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1164
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 11,
+    "incidents": 1026
+  },
+  {
+    "district": "3",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1075
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 1,
+    "incidents": 1045
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 2,
+    "incidents": 1047
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 3,
+    "incidents": 1063
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 4,
+    "incidents": 1074
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 5,
+    "incidents": 1203
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1124
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1245
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1138
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 9,
+    "incidents": 1133
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 10,
+    "incidents": 1120
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 11,
+    "incidents": 909
+  },
+  {
+    "district": "3",
+    "year": 2024,
+    "month": 12,
+    "incidents": 1053
+  },
+  {
+    "district": "31",
+    "year": 2022,
+    "month": 2,
+    "incidents": 2
+  },
+  {
+    "district": "31",
+    "year": 2022,
+    "month": 3,
+    "incidents": 2
+  },
+  {
+    "district": "31",
+    "year": 2022,
+    "month": 4,
+    "incidents": 2
+  },
+  {
+    "district": "31",
+    "year": 2022,
+    "month": 5,
+    "incidents": 1
+  },
+  {
+    "district": "31",
+    "year": 2022,
+    "month": 7,
+    "incidents": 2
+  },
+  {
+    "district": "31",
+    "year": 2022,
+    "month": 8,
+    "incidents": 4
+  },
+  {
+    "district": "31",
+    "year": 2022,
+    "month": 9,
+    "incidents": 2
+  },
+  {
+    "district": "31",
+    "year": 2023,
+    "month": 1,
+    "incidents": 3
+  },
+  {
+    "district": "31",
+    "year": 2023,
+    "month": 2,
+    "incidents": 1
+  },
+  {
+    "district": "31",
+    "year": 2023,
+    "month": 3,
+    "incidents": 1
+  },
+  {
+    "district": "31",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1
+  },
+  {
+    "district": "31",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1
+  },
+  {
+    "district": "31",
+    "year": 2023,
+    "month": 6,
+    "incidents": 2
+  },
+  {
+    "district": "31",
+    "year": 2023,
+    "month": 7,
+    "incidents": 2
+  },
+  {
+    "district": "31",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1
+  },
+  {
+    "district": "31",
+    "year": 2023,
+    "month": 11,
+    "incidents": 2
+  },
+  {
+    "district": "31",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1
+  },
+  {
+    "district": "31",
+    "year": 2024,
+    "month": 1,
+    "incidents": 3
+  },
+  {
+    "district": "31",
+    "year": 2024,
+    "month": 4,
+    "incidents": 1
+  },
+  {
+    "district": "31",
+    "year": 2024,
+    "month": 7,
+    "incidents": 2
+  },
+  {
+    "district": "31",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1
+  },
+  {
+    "district": "31",
+    "year": 2024,
+    "month": 9,
+    "incidents": 3
+  },
+  {
+    "district": "31",
+    "year": 2024,
+    "month": 11,
+    "incidents": 1
+  },
+  {
+    "district": "31",
+    "year": 2024,
+    "month": 12,
+    "incidents": 3
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 1,
+    "incidents": 924
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 2,
+    "incidents": 886
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 3,
+    "incidents": 1029
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 4,
+    "incidents": 1059
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 5,
+    "incidents": 1130
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 6,
+    "incidents": 1190
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 7,
+    "incidents": 1318
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 8,
+    "incidents": 1337
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1354
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 10,
+    "incidents": 1430
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 11,
+    "incidents": 1185
+  },
+  {
+    "district": "4",
+    "year": 2022,
+    "month": 12,
+    "incidents": 1177
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 1,
+    "incidents": 1309
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 2,
+    "incidents": 1115
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 3,
+    "incidents": 1139
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1227
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1216
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1299
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1459
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1266
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1223
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1421
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 11,
+    "incidents": 1218
+  },
+  {
+    "district": "4",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1129
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 1,
+    "incidents": 1072
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 2,
+    "incidents": 1099
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 3,
+    "incidents": 1080
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 4,
+    "incidents": 1126
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 5,
+    "incidents": 1192
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1188
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1245
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1204
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 9,
+    "incidents": 1213
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 10,
+    "incidents": 1192
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 11,
+    "incidents": 1086
+  },
+  {
+    "district": "4",
+    "year": 2024,
+    "month": 12,
+    "incidents": 1046
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 1,
+    "incidents": 688
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 2,
+    "incidents": 605
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 3,
+    "incidents": 758
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 4,
+    "incidents": 774
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 5,
+    "incidents": 821
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 6,
+    "incidents": 810
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 7,
+    "incidents": 822
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 8,
+    "incidents": 973
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 9,
+    "incidents": 981
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 10,
+    "incidents": 976
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 11,
+    "incidents": 861
+  },
+  {
+    "district": "5",
+    "year": 2022,
+    "month": 12,
+    "incidents": 778
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 1,
+    "incidents": 892
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 2,
+    "incidents": 727
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 3,
+    "incidents": 844
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 4,
+    "incidents": 827
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 5,
+    "incidents": 947
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 6,
+    "incidents": 873
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 7,
+    "incidents": 940
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 8,
+    "incidents": 953
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 9,
+    "incidents": 886
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 10,
+    "incidents": 897
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 11,
+    "incidents": 857
+  },
+  {
+    "district": "5",
+    "year": 2023,
+    "month": 12,
+    "incidents": 882
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 1,
+    "incidents": 816
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 2,
+    "incidents": 805
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 3,
+    "incidents": 813
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 4,
+    "incidents": 858
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 5,
+    "incidents": 919
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 6,
+    "incidents": 918
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1009
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 8,
+    "incidents": 887
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 9,
+    "incidents": 927
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 10,
+    "incidents": 853
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 11,
+    "incidents": 720
+  },
+  {
+    "district": "5",
+    "year": 2024,
+    "month": 12,
+    "incidents": 733
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 1,
+    "incidents": 984
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 2,
+    "incidents": 958
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 3,
+    "incidents": 1201
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 4,
+    "incidents": 1189
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 5,
+    "incidents": 1264
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 6,
+    "incidents": 1223
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 7,
+    "incidents": 1321
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 8,
+    "incidents": 1307
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1386
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 10,
+    "incidents": 1394
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 11,
+    "incidents": 1307
+  },
+  {
+    "district": "6",
+    "year": 2022,
+    "month": 12,
+    "incidents": 1237
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 1,
+    "incidents": 1354
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 2,
+    "incidents": 1159
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 3,
+    "incidents": 1294
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1274
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1410
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1324
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1430
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1404
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1304
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1393
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 11,
+    "incidents": 1283
+  },
+  {
+    "district": "6",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1224
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 1,
+    "incidents": 1149
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 2,
+    "incidents": 1133
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 3,
+    "incidents": 1326
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 4,
+    "incidents": 1185
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 5,
+    "incidents": 1425
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1328
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1351
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1262
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 9,
+    "incidents": 1263
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 10,
+    "incidents": 1295
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 11,
+    "incidents": 1091
+  },
+  {
+    "district": "6",
+    "year": 2024,
+    "month": 12,
+    "incidents": 1068
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 1,
+    "incidents": 31
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 2,
+    "incidents": 37
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 3,
+    "incidents": 33
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 4,
+    "incidents": 21
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 5,
+    "incidents": 28
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 6,
+    "incidents": 25
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 7,
+    "incidents": 25
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 8,
+    "incidents": 28
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 9,
+    "incidents": 20
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 10,
+    "incidents": 24
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 11,
+    "incidents": 21
+  },
+  {
+    "district": "61",
+    "year": 2022,
+    "month": 12,
+    "incidents": 28
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 1,
+    "incidents": 42
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 2,
+    "incidents": 25
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 3,
+    "incidents": 28
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 4,
+    "incidents": 29
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 5,
+    "incidents": 29
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 6,
+    "incidents": 35
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 7,
+    "incidents": 37
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 8,
+    "incidents": 28
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 9,
+    "incidents": 31
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 10,
+    "incidents": 36
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 11,
+    "incidents": 26
+  },
+  {
+    "district": "61",
+    "year": 2023,
+    "month": 12,
+    "incidents": 32
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 1,
+    "incidents": 38
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 2,
+    "incidents": 27
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 3,
+    "incidents": 28
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 4,
+    "incidents": 31
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 5,
+    "incidents": 31
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 6,
+    "incidents": 28
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 7,
+    "incidents": 33
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 8,
+    "incidents": 25
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 9,
+    "incidents": 28
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 10,
+    "incidents": 18
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 11,
+    "incidents": 16
+  },
+  {
+    "district": "61",
+    "year": 2024,
+    "month": 12,
+    "incidents": 28
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 1,
+    "incidents": 743
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 2,
+    "incidents": 690
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 3,
+    "incidents": 822
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 4,
+    "incidents": 808
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 5,
+    "incidents": 969
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 6,
+    "incidents": 889
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 7,
+    "incidents": 875
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 8,
+    "incidents": 968
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 9,
+    "incidents": 961
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 10,
+    "incidents": 966
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 11,
+    "incidents": 856
+  },
+  {
+    "district": "7",
+    "year": 2022,
+    "month": 12,
+    "incidents": 804
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 1,
+    "incidents": 893
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 2,
+    "incidents": 766
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 3,
+    "incidents": 962
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 4,
+    "incidents": 904
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 5,
+    "incidents": 954
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 6,
+    "incidents": 988
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1005
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 8,
+    "incidents": 942
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 9,
+    "incidents": 923
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 10,
+    "incidents": 922
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 11,
+    "incidents": 846
+  },
+  {
+    "district": "7",
+    "year": 2023,
+    "month": 12,
+    "incidents": 787
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 1,
+    "incidents": 799
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 2,
+    "incidents": 792
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 3,
+    "incidents": 843
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 4,
+    "incidents": 847
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 5,
+    "incidents": 963
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1008
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 7,
+    "incidents": 981
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 8,
+    "incidents": 953
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 9,
+    "incidents": 984
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 10,
+    "incidents": 986
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 11,
+    "incidents": 817
+  },
+  {
+    "district": "7",
+    "year": 2024,
+    "month": 12,
+    "incidents": 806
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 1,
+    "incidents": 962
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 2,
+    "incidents": 943
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 3,
+    "incidents": 1124
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 4,
+    "incidents": 1150
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 5,
+    "incidents": 1309
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 6,
+    "incidents": 1254
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 7,
+    "incidents": 1303
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 8,
+    "incidents": 1370
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 9,
+    "incidents": 1364
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 10,
+    "incidents": 1444
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 11,
+    "incidents": 1357
+  },
+  {
+    "district": "8",
+    "year": 2022,
+    "month": 12,
+    "incidents": 1300
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 1,
+    "incidents": 1352
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 2,
+    "incidents": 1308
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 3,
+    "incidents": 1339
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 4,
+    "incidents": 1294
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1413
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1411
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1512
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1531
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1549
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1536
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 11,
+    "incidents": 1408
+  },
+  {
+    "district": "8",
+    "year": 2023,
+    "month": 12,
+    "incidents": 1390
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 1,
+    "incidents": 1255
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 2,
+    "incidents": 1351
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 3,
+    "incidents": 1495
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 4,
+    "incidents": 1274
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 5,
+    "incidents": 1525
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1461
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1638
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1508
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 9,
+    "incidents": 1601
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 10,
+    "incidents": 1523
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 11,
+    "incidents": 1354
+  },
+  {
+    "district": "8",
+    "year": 2024,
+    "month": 12,
+    "incidents": 1301
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 1,
+    "incidents": 731
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 2,
+    "incidents": 728
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 3,
+    "incidents": 738
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 4,
+    "incidents": 833
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 5,
+    "incidents": 900
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 6,
+    "incidents": 978
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 7,
+    "incidents": 970
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 8,
+    "incidents": 954
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 9,
+    "incidents": 937
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 10,
+    "incidents": 957
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 11,
+    "incidents": 839
+  },
+  {
+    "district": "9",
+    "year": 2022,
+    "month": 12,
+    "incidents": 854
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 1,
+    "incidents": 853
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 2,
+    "incidents": 833
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 3,
+    "incidents": 849
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 4,
+    "incidents": 947
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 5,
+    "incidents": 1015
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 6,
+    "incidents": 1008
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 7,
+    "incidents": 1078
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 8,
+    "incidents": 1082
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 9,
+    "incidents": 1043
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 10,
+    "incidents": 1059
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 11,
+    "incidents": 965
+  },
+  {
+    "district": "9",
+    "year": 2023,
+    "month": 12,
+    "incidents": 950
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 1,
+    "incidents": 856
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 2,
+    "incidents": 878
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 3,
+    "incidents": 861
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 4,
+    "incidents": 915
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 5,
+    "incidents": 955
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 6,
+    "incidents": 1029
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 7,
+    "incidents": 1124
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 8,
+    "incidents": 1035
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 9,
+    "incidents": 988
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 10,
+    "incidents": 920
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 11,
+    "incidents": 930
+  },
+  {
+    "district": "9",
+    "year": 2024,
+    "month": 12,
+    "incidents": 872
+  }
+]

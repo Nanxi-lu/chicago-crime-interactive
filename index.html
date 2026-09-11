@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore reported Chicago crime patterns by police district from 2022 to 2024."
+    />
+    <meta name="theme-color" content="#07111f" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2307111f'/%3E%3Cpath d='M7 23V11l6-3 5 3 7-3v13l-7 3-5-3-6 2Z' fill='none' stroke='%2338d6c6' stroke-width='2' stroke-linejoin='round'/%3E%3Ccircle cx='18' cy='15' r='2.5' fill='%23ffb454'/%3E%3C/svg%3E"
+    />
+    <title>Chicago Crime Patterns · 2022–2024</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#explorer">Skip to district explorer</a>
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Chicago Crime Patterns home">
+        <span class="brand-mark" aria-hidden="true">CHI</span>
+        <span>Crime Patterns</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#explorer">District explorer</a>
+        <a href="#analysis">Analysis</a>
+        <a href="#method">Method</a>
+        <a class="report-link" href="report.pdf">Full report <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Spatio-temporal analysis · 2022–2024</p>
+          <h1 id="page-title">Explore how reported crime changed across Chicago.</h1>
+        </div>
+        <p class="intro-copy">
+          Select a police district to connect place and time. The map shows the
+          spatial distribution; the chart reveals the district’s monthly pattern.
+        </p>
+      </section>
+
+      <section class="explorer" id="explorer" aria-labelledby="explorer-title">
+        <div class="explorer-heading">
+          <div>
+            <p class="section-index">01 · Interactive explorer</p>
+            <h2 id="explorer-title">District patterns</h2>
+          </div>
+          <div class="controls" aria-label="Map controls">
+            <label for="district-select">Police district</label>
+            <select id="district-select" aria-label="Choose a police district">
+              <option>Loading districts…</option>
+            </select>
+            <fieldset class="year-switcher">
+              <legend>Map period</legend>
+              <button type="button" class="year-button is-active" data-year="all" aria-pressed="true">All</button>
+              <button type="button" class="year-button" data-year="2022" aria-pressed="false">2022</button>
+              <button type="button" class="year-button" data-year="2023" aria-pressed="false">2023</button>
+              <button type="button" class="year-button" data-year="2024" aria-pressed="false">2024</button>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="map-card panel" aria-labelledby="map-title">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-label">Reported incidents</p>
+                <h3 id="map-title">Police districts</h3>
+              </div>
+              <p id="map-period" class="period-label">2022–2024</p>
+            </div>
+            <div id="district-map" class="map"></div>
+            <div class="legend" aria-label="Map colour legend">
+              <span>Fewer</span>
+              <span class="legend-ramp" aria-hidden="true"></span>
+              <span>More</span>
+            </div>
+            <p class="map-instruction">Click a district to update the trend.</p>
+          </article>
+
+          <article class="trend-card panel" aria-labelledby="trend-title">
+            <div class="panel-heading trend-heading">
+              <div>
+                <p class="panel-label">Monthly trend</p>
+                <h3 id="trend-title"><span id="district-name">District —</span></h3>
+              </div>
+              <p id="trend-direction" class="trend-pill">Loading</p>
+            </div>
+
+            <div class="stats" aria-label="District summary statistics">
+              <div class="stat">
+                <span class="stat-label">2022–24 total</span>
+                <strong id="district-total">—</strong>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Monthly average</span>
+                <strong id="monthly-average">—</strong>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Peak month</span>
+                <strong id="peak-month">—</strong>
+              </div>
+            </div>
+
+            <div class="chart-wrap">
+              <canvas id="trend-chart" aria-label="Monthly reported crime trend for the selected district"></canvas>
+            </div>
+            <p class="chart-note">
+              District counts are shown as reported incidents, not population-adjusted rates.
+            </p>
+          </article>
+        </div>
+
+        <div id="loading-state" class="loading-state" role="status">Loading verified district data…</div>
+        <div id="error-state" class="error-state" role="alert" hidden>
+          The interactive data could not be loaded. Please refresh the page or view the full report.
+        </div>
+      </section>
+
+      <section class="analysis" id="analysis" aria-labelledby="analysis-title">
+        <div class="section-heading">
+          <p class="section-index">02 · Analysis views</p>
+          <h2 id="analysis-title">Patterns beyond the district map</h2>
+          <p>
+            Selected figures from the accompanying analysis show how crime varies
+            across the week, across space, and between forecasting models.
+          </p>
+        </div>
+
+        <div class="figure-grid">
+          <figure class="feature-figure feature-figure--wide">
+            <button class="image-button" type="button" data-image="assets/hour-weekday-heatmap.png" data-caption="Crime counts by hour and weekday">
+              <img src="assets/hour-weekday-heatmap.png" alt="Heatmap of crime counts by hour and weekday" loading="lazy" />
+              <span class="expand-label">View larger</span>
+            </button>
+            <figcaption>
+              <span>Temporal rhythm</span>
+              Crime counts by hour and weekday.
+            </figcaption>
+          </figure>
+
+          <figure class="feature-figure">
+            <button class="image-button" type="button" data-image="assets/spatial-2024.png" data-caption="Spatial distribution of reported crime in 2024">
+              <img src="assets/spatial-2024.png" alt="Map of the spatial distribution of reported crime in 2024" loading="lazy" />
+              <span class="expand-label">View larger</span>
+            </button>
+            <figcaption>
+              <span>Spatial pattern</span>
+              The 2024 distribution used in the report.
+            </figcaption>
+          </figure>
+
+          <figure class="feature-figure">
+            <button class="image-button" type="button" data-image="assets/model-comparison.png" data-caption="Forecast model comparison">
+              <img src="assets/model-comparison.png" alt="Comparison of forecasting model performance" loading="lazy" />
+              <span class="expand-label">View larger</span>
+            </button>
+            <figcaption>
+              <span>Forecasting</span>
+              Model performance comparison from the final analysis.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="method" id="method" aria-labelledby="method-title">
+        <div class="section-heading">
+          <p class="section-index">03 · Method & sources</p>
+          <h2 id="method-title">Read the map carefully</h2>
+        </div>
+        <div class="method-grid">
+          <div>
+            <h3>What a count means</h3>
+            <p>
+              Values represent records in the City of Chicago’s reported-crime dataset.
+              They are aggregated by the police district field and month for 2022–2024.
+            </p>
+          </div>
+          <div>
+            <h3>What it does not mean</h3>
+            <p>
+              The map does not adjust for district population, area, reporting behaviour,
+              or exposure. Comparisons should be treated as incident counts rather than risk.
+            </p>
+          </div>
+          <div>
+            <h3>Sources</h3>
+            <p>
+              <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2" rel="noreferrer">Crimes — 2001 to Present</a><br />
+              <a href="https://data.cityofchicago.org/Public-Safety/Boundaries-Police-Districts-current-/fthy-xz3r" rel="noreferrer">Police district boundaries</a><br />
+              <a href="report.pdf">Complete analysis report</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Chicago crime spatio-temporal analysis · 2022–2024</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <dialog id="image-dialog" aria-labelledby="dialog-caption">
+      <button class="dialog-close" type="button" aria-label="Close image">×</button>
+      <img id="dialog-image" alt="" />
+      <p id="dialog-caption"></p>
+    </dialog>
+
+    <div id="map-tooltip" class="map-tooltip" role="tooltip" hidden></div>
+  </body>
+</html>
