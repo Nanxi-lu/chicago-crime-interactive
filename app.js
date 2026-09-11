@@ -41,10 +41,10 @@ const TRAIN_SHARE = 0.8;
 
 // Out-of-sample errors on weekly citywide counts, from the accompanying report (Table 1).
 const MODELS = [
-  { id: "naive", name: "Naive", detail: "Last week carried forward", rmse: 737, mae: 660 },
-  { id: "arima", name: "ARIMA", detail: "ARIMA(3,1,2), non-seasonal", rmse: 584, mae: 521 },
-  { id: "sarima", name: "SARIMA", detail: "SARIMA(1,1,1)(0,1,0)[52]", rmse: 337, mae: 264 },
-  { id: "rf", name: "Random Forest", detail: "Lags, rolling means, seasonal encodings", rmse: 261, mae: 233 },
+  { id: "naive", name: "Same as last week", detail: "Assumes next week will match this week", rmse: 737, mae: 660 },
+  { id: "arima", name: "Recent trend", detail: "Follows the pattern of the last few weeks (ARIMA)", rmse: 584, mae: 521 },
+  { id: "sarima", name: "Recent trend + seasons", detail: "Also uses what happened this time last year (SARIMA)", rmse: 337, mae: 264 },
+  { id: "rf", name: "Machine learning", detail: "Learns from many past patterns at once (random forest)", rmse: 261, mae: 233 },
 ];
 const FILL_DURATION = 700;
 const EASE = d3.easeCubicOut;
@@ -264,7 +264,7 @@ function updateMap() {
   setText(
     "map-selection-total",
     `${numberFormat.format(totals.get(state.selectedDistrict) ?? 0)} ${
-      state.typeFilter ? `${typeLabel(state.typeFilter).toLowerCase()} incidents` : "incidents"
+      state.typeFilter ? `${typeLabel(state.typeFilter).toLowerCase()} reports` : "reports"
     } · ${periodLabel()}`,
   );
 }
@@ -301,10 +301,10 @@ function updateTrend() {
   setText("district-name", districtName(state.selectedDistrict));
   setNumber("district-total", total);
   setNumber("monthly-average", Math.round(average));
-  setText("peak-month", `${MONTH_NAMES[peak.month - 1]} ${peak.year}`, `${numberFormat.format(peak.incidents)} incidents`);
-  setText("lowest-month", `${MONTH_NAMES[lowest.month - 1]} ${lowest.year}`, `${numberFormat.format(lowest.incidents)} incidents`);
+  setText("peak-month", `${MONTH_NAMES[peak.month - 1]} ${peak.year}`, `${numberFormat.format(peak.incidents)} reports`);
+  setText("lowest-month", `${MONTH_NAMES[lowest.month - 1]} ${lowest.year}`, `${numberFormat.format(lowest.incidents)} reports`);
   setNumber("city-share", cityTotal ? total / cityTotal : 0, percentFormat);
-  setText("district-rank", rank ? `#${rank}` : "—", rank ? `of ${ranked.length} districts by total` : "");
+  setText("district-rank", rank ? `#${rank}` : "—", rank ? `of ${ranked.length} districts, most reports first` : "");
 
   const maxYear = Math.max(...totalsByYear.values(), 1);
   for (const year of YEARS) {
@@ -367,7 +367,7 @@ function updateTrend() {
           borderWidth: 1,
           padding: 12,
           callbacks: {
-            label: (item) => `${numberFormat.format(item.raw)} reported incidents`,
+            label: (item) => `${numberFormat.format(item.raw)} reports`,
           },
         },
       },
@@ -472,7 +472,7 @@ function renderMap() {
     .attr("fill", "#18283a")
     .attr("tabindex", 0)
     .attr("role", "button")
-    .attr("aria-label", (feature) => `District ${districtLabel(feature.properties.dist_num)}, select to view details`)
+    .attr("aria-label", (feature) => `District ${districtLabel(feature.properties.dist_num)}, select to see details`)
     .on("click", (_, feature) => selectDistrict(feature.properties.dist_num))
     .on("keydown", (event, feature) => {
       if (event.key === "Enter" || event.key === " ") {
@@ -484,17 +484,17 @@ function renderMap() {
       const district = districtKey(feature.properties.dist_num);
       const totals = getMapTotals();
       if (!totals.has(district)) {
-        showTooltip(event, `<strong>District ${districtNumber(district)}</strong><span>No linked records</span>`);
+        showTooltip(event, `<strong>District ${districtNumber(district)}</strong><span>No data for this area</span>`);
         return;
       }
       const total = totals.get(district);
       const cityTotal = state.typeFilter
         ? citywideTypeTotal(state.selectedYear, state.typeFilter)
         : citywideTotal(state.selectedYear);
-      const what = state.typeFilter ? `${typeLabel(state.typeFilter).toLowerCase()} incidents` : "incidents";
+      const what = state.typeFilter ? `${typeLabel(state.typeFilter).toLowerCase()} reports` : "reports";
       showTooltip(event, `<strong>${districtLabel(district)}</strong>
-        <span>${numberFormat.format(total)} ${what} · ${percentFormat.format(cityTotal ? total / cityTotal : 0)} of city</span>
-        <em>Click for full details</em>`);
+        <span>${numberFormat.format(total)} ${what} · ${percentFormat.format(cityTotal ? total / cityTotal : 0)} of the city total</span>
+        <em>Click to see details</em>`);
     })
     .on("pointerleave", hideTooltip);
 
@@ -649,8 +649,8 @@ function renderHeatmap() {
       const ratio = cityShare ? share / cityShare : 0;
       const hourLabel = `${String(d.hour).padStart(2, "0")}:00–${String((d.hour + 1) % 24).padStart(2, "0")}:00`;
       showTooltip(event, `<strong>${WEEKDAY_NAMES[d.dow]} ${hourLabel}</strong>
-        <span>${numberFormat.format(count)} incidents · ${percentFormat.format(share)} of the district's week</span>
-        <em>${ratio ? `${ratioFormat.format(ratio)}× the citywide pattern` : "No citywide comparison"}</em>`);
+        <span>${numberFormat.format(count)} reports · ${percentFormat.format(share)} of this district's week</span>
+        <em>${ratio ? `${ratioFormat.format(ratio)}× what is typical for the city at this hour` : "No comparison available"}</em>`);
       rowLabels.classed("is-active", (dow) => dow === d.dow);
       columnLabels.classed("is-active", (hour) => hour === d.hour);
     })
@@ -720,7 +720,7 @@ function updateHeatmap() {
     document.querySelector("#heat-legend-low").textContent = "½× city";
     document.querySelector("#heat-legend-high").textContent = "2× city";
     document.querySelector("#heat-note").textContent =
-      "Each cell compares the district's share of its week with the city's share of the same hour. Amber hours are relatively busier here than citywide.";
+      "Orange squares are hours that are busier in this district than is typical for the city. Blue squares are quieter than typical.";
   } else {
     // Cap the scale at the 95th percentile so the midnight spike (incidents logged
     // without a precise time default to 00:00) does not flatten every other hour.
@@ -731,7 +731,7 @@ function updateHeatmap() {
     document.querySelector("#heat-legend-low").textContent = "Fewer";
     document.querySelector("#heat-legend-high").textContent = "More";
     document.querySelector("#heat-note").textContent =
-      "Local time of the reported incident; bars above show the hourly total. Midnight is inflated by reports logged without a precise time. Colour is capped at the 95th percentile.";
+      "Each square is one hour of one weekday; the bars above add up each hour. Midnight looks high because reports with no exact time are logged at 00:00.";
   }
 
   state.heat.cells.transition().duration(duration).ease(EASE).attr("fill", fill);
@@ -748,7 +748,7 @@ function updateHeatmap() {
   state.heat.rowTotals.text((dow) => compactFormat.format(d3.sum(district[dow])));
 
   document.querySelector("#heat-subtitle").textContent =
-    `${districtLabel(state.selectedDistrict)} · ${periodLabel()} · ${numberFormat.format(districtTotal)} incidents`;
+    `${districtLabel(state.selectedDistrict)} · ${periodLabel()} · ${numberFormat.format(districtTotal)} reports`;
 }
 
 function updateTypes() {
@@ -814,9 +814,9 @@ function updateTypes() {
     .on("pointerenter pointermove", (event, row) => {
       const ratio = row.cityShare ? row.share / row.cityShare : 0;
       showTooltip(event, `<strong>${typeLabel(row.type)}</strong>
-        <span>${numberFormat.format(row.count)} incidents · ${percentFormat.format(row.share)} of the district</span>
-        <span>Citywide: ${percentFormat.format(row.cityShare)}${ratio ? ` · ${ratioFormat.format(ratio)}× the city share` : ""}</span>
-        <em>${row.type === state.typeFilter ? "Click to show all crimes" : "Click to colour the map"}</em>`);
+        <span>${numberFormat.format(row.count)} reports · ${percentFormat.format(row.share)} of this district's crime</span>
+        <span>Whole city: ${percentFormat.format(row.cityShare)}${ratio ? ` · ${ratioFormat.format(ratio)}× the city's share` : ""}</span>
+        <em>${row.type === state.typeFilter ? "Click to show all crimes again" : "Click to colour the map by this"}</em>`);
     })
     .on("pointerleave", hideTooltip);
 
@@ -837,7 +837,7 @@ function updateTypes() {
     .style("left", (row) => `${(row.cityShare / maxShare) * 100}%`);
 
   document.querySelector("#types-subtitle").textContent =
-    `${districtLabel(district)} · ${periodLabel()} · top ${Math.min(TOP_TYPES, rows.length)} of ${districtCounts.size} types`;
+    `${districtLabel(district)} · ${periodLabel()} · the ${Math.min(TOP_TYPES, rows.length)} most common of ${districtCounts.size} types`;
   document.querySelector("#type-reset").hidden = !state.typeFilter;
 }
 
@@ -867,10 +867,10 @@ function renderForecast() {
       ctx.fillStyle = "#ffb454";
       ctx.font = "700 11px ui-monospace, SFMono-Regular, Menlo, monospace";
       ctx.textAlign = "left";
-      ctx.fillText("TEST WEEKS", start + 8, chartArea.top + 14);
+      ctx.fillText("PREDICTED", start + 8, chartArea.top + 14);
       ctx.textAlign = "right";
       ctx.fillStyle = "#6f8497";
-      ctx.fillText("TRAINING", start - 8, chartArea.top + 14);
+      ctx.fillText("LEARNED FROM", start - 8, chartArea.top + 14);
       ctx.restore();
     },
   };
@@ -932,8 +932,8 @@ function renderForecast() {
           filter: (item) => item.datasetIndex === 0,
           callbacks: {
             title: (items) => `Week of ${items[0].label}`,
-            label: (item) => `${numberFormat.format(item.raw)} reported incidents citywide`,
-            afterLabel: (item) => (item.dataIndex >= trainSize ? "Held-out test week" : "Training week"),
+            label: (item) => `${numberFormat.format(item.raw)} reports across Chicago`,
+            afterLabel: (item) => (item.dataIndex >= trainSize ? "One of the predicted weeks" : "Used to learn the pattern"),
           },
         },
       },
@@ -981,8 +981,8 @@ function renderForecast() {
     .on("pointerenter pointermove", (event, model) => {
       showTooltip(event, `<strong>${model.name}</strong>
         <span>${model.detail}</span>
-        <span>RMSE ${numberFormat.format(model.rmse)} · MAE ${numberFormat.format(model.mae)} incidents per week</span>
-        <em>${model.id === state.selectedModel ? "Shown on the chart" : "Click to show its error band"}</em>`);
+        <span>Typically off by about ${numberFormat.format(model.mae)} reports a week</span>
+        <em>${model.id === state.selectedModel ? "Shown on the chart" : "Click to show it on the chart"}</em>`);
     })
     .on("pointerleave", hideTooltip);
 
@@ -991,10 +991,10 @@ function renderForecast() {
       <span class="model-name">${model.name}</span>
       <span class="model-rank"></span>
     </span>
-    <span class="model-metric"><span class="model-metric-label">RMSE</span>
+    <span class="model-metric"><span class="model-metric-label" title="Root mean square error">Big misses</span>
       <span class="model-track"><span class="model-bar model-bar--rmse" style="width:${(model.rmse / maxError) * 100}%"></span></span>
       <span class="model-value">${numberFormat.format(model.rmse)}</span></span>
-    <span class="model-metric"><span class="model-metric-label">MAE</span>
+    <span class="model-metric"><span class="model-metric-label" title="Mean absolute error">Typical</span>
       <span class="model-track"><span class="model-bar model-bar--mae" style="width:${(model.mae / maxError) * 100}%"></span></span>
       <span class="model-value">${numberFormat.format(model.mae)}</span></span>
   `);
@@ -1018,7 +1018,7 @@ function updateForecast() {
   state.weeklyChart.update();
 
   document.querySelector("#forecast-note").textContent =
-    `${model.name}: forecasts on the held-out weeks were typically within ±${numberFormat.format(model.rmse)} incidents (RMSE) of the observed count. Errors are from the accompanying report.`;
+    `${model.name}: the shaded band shows how far its predictions typically strayed from the real numbers (about ${numberFormat.format(model.rmse)} reports a week either way). Lower is better.`;
 }
 
 async function initialise() {

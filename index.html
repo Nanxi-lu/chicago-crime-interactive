@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Explore reported Chicago crime patterns by police district from 2022 to 2024."
+      content="See where and when crime was reported across Chicago's police districts, 2022 to 2024."
     />
     <meta name="theme-color" content="#07111f" />
     <link
@@ -44,17 +44,18 @@
     <main id="top">
       <section class="intro" aria-labelledby="page-title">
         <div>
-          <p class="eyebrow">Spatio-temporal analysis · 2022–2024</p>
-          <h1 id="page-title">Explore how reported crime changed across Chicago.</h1>
+          <p class="eyebrow">Reported crime in Chicago · 2022–2024</p>
+          <h1 id="page-title">Where and when is crime reported in Chicago?</h1>
         </div>
         <div>
           <p class="intro-copy">
-            Select a police district to connect place and time. The map shows the
-            spatial distribution; the chart reveals the district’s monthly pattern.
+            Pick a police district on the map to see how many crimes were reported
+            there, how that changed month by month, and how it compares with the
+            rest of the city.
           </p>
           <p class="byline">
             By <a href="https://github.com/Nanxi-lu" rel="noreferrer">Nanxi Lu</a> ·
-            CASA, UCL · Spatio-temporal Data Analysis and Data Mining
+            Centre for Advanced Spatial Analysis, UCL
           </p>
         </div>
       </section>
@@ -62,8 +63,8 @@
       <section class="explorer" id="explorer" aria-labelledby="explorer-title">
         <div class="explorer-heading">
           <div>
-            <p class="section-index">01 · Interactive explorer</p>
-            <h2 id="explorer-title">District patterns</h2>
+            <p class="section-index">01 · Explore the map</p>
+            <h2 id="explorer-title">Crime by police district</h2>
           </div>
           <div class="controls" aria-label="Map controls">
             <label for="district-select">Police district</label>
@@ -84,7 +85,7 @@
           <article class="map-card panel" aria-labelledby="map-title">
             <div class="panel-heading">
               <div>
-                <p class="panel-label">Reported incidents</p>
+                <p class="panel-label">Reported crimes</p>
                 <h3 id="map-title">Police districts</h3>
                 <button type="button" id="map-filter" class="map-filter" hidden>
                   <span id="map-filter-label">Theft</span> <span aria-hidden="true">×</span>
@@ -106,13 +107,13 @@
               <span class="legend-ramp" aria-hidden="true"></span>
               <span>More</span>
             </div>
-            <p class="map-instruction">Click a district to see its full profile.</p>
+            <p class="map-instruction">Darker means fewer reports, brighter means more. Click a district to see its details.</p>
           </article>
 
           <article class="trend-card panel" aria-labelledby="trend-title" aria-live="polite">
             <div class="panel-heading trend-heading">
               <div>
-                <p class="panel-label">Monthly trend</p>
+                <p class="panel-label">Month by month</p>
                 <p class="district-number" id="district-number">District —</p>
                 <h3 id="trend-title"><span id="district-name">—</span></h3>
               </div>
@@ -121,27 +122,27 @@
 
             <div class="stats" aria-label="District summary statistics">
               <div class="stat">
-                <span class="stat-label">2022–24 total</span>
+                <span class="stat-label">Total reports, 2022–24</span>
                 <strong id="district-total">—</strong>
               </div>
               <div class="stat">
-                <span class="stat-label">Monthly average</span>
+                <span class="stat-label">Average per month</span>
                 <strong id="monthly-average">—</strong>
               </div>
               <div class="stat">
-                <span class="stat-label">Peak month</span>
+                <span class="stat-label">Busiest month</span>
                 <strong id="peak-month">—</strong>
               </div>
               <div class="stat">
-                <span class="stat-label">Lowest month</span>
+                <span class="stat-label">Quietest month</span>
                 <strong id="lowest-month">—</strong>
               </div>
               <div class="stat">
-                <span class="stat-label">Citywide share</span>
+                <span class="stat-label">Share of all Chicago reports</span>
                 <strong id="city-share">—</strong>
               </div>
               <div class="stat">
-                <span class="stat-label">District rank</span>
+                <span class="stat-label">Rank among districts</span>
                 <strong id="district-rank">—</strong>
               </div>
             </div>
@@ -168,25 +169,24 @@
               <canvas id="trend-chart" aria-label="Monthly reported crime trend for the selected district"></canvas>
             </div>
             <p class="chart-note">
-              District counts are shown as reported incidents, not population-adjusted rates.
+              These are counts of reports. They are not adjusted for how many people live in each district.
             </p>
           </article>
         </div>
 
-        <div id="loading-state" class="loading-state" role="status">Loading verified district data…</div>
+        <div id="loading-state" class="loading-state" role="status">Loading the data…</div>
         <div id="error-state" class="error-state" role="alert" hidden>
-          The interactive data could not be loaded. Please refresh the page or view the full report.
+          The data could not be loaded. Please refresh the page.
         </div>
       </section>
 
       <section class="analysis" id="analysis" aria-labelledby="analysis-title">
         <div class="section-heading">
-          <p class="section-index">02 · Analysis views</p>
-          <h2 id="analysis-title">Patterns beyond the district map</h2>
+          <p class="section-index">02 · A closer look</p>
+          <h2 id="analysis-title">When it happens, what it is, and what to expect</h2>
           <p>
-            Every panel follows the district and period selected above. Hover for
-            exact values, switch the heatmap to compare against the city, and click
-            a crime type to recolour the map by that offence.
+            These charts follow the district and years you chose above. Hover over
+            anything to see the numbers. Click a crime type to colour the map by it.
           </p>
         </div>
 
@@ -194,42 +194,42 @@
           <article class="panel heat-card" aria-labelledby="heat-title">
             <div class="panel-heading">
               <div>
-                <p class="panel-label">Temporal rhythm</p>
-                <h3 id="heat-title">Incidents by hour and weekday</h3>
+                <p class="panel-label">Time of week</p>
+                <h3 id="heat-title">What time of day and week?</h3>
                 <p class="panel-sub" id="heat-subtitle">—</p>
               </div>
               <fieldset class="mode-switcher" id="heat-mode">
                 <legend>Heatmap mode</legend>
-                <button type="button" class="mode-button is-active" data-mode="count" aria-pressed="true">Counts</button>
-                <button type="button" class="mode-button" data-mode="index" aria-pressed="false">vs. city</button>
+                <button type="button" class="mode-button is-active" data-mode="count" aria-pressed="true">Number of reports</button>
+                <button type="button" class="mode-button" data-mode="index" aria-pressed="false">Compared with the city</button>
               </fieldset>
             </div>
-            <div id="heatmap" class="heatmap" role="img" aria-label="Heatmap of incidents by hour of day and weekday"></div>
+            <div id="heatmap" class="heatmap" role="img" aria-label="Grid of reports by hour of the day and day of the week"></div>
             <div class="legend heat-legend" aria-label="Heatmap colour legend">
               <span id="heat-legend-low">Fewer</span>
               <span class="legend-ramp" id="heat-ramp" aria-hidden="true"></span>
               <span id="heat-legend-high">More</span>
             </div>
             <p class="chart-note" id="heat-note">
-              Local time of the reported incident. Hover a cell for the exact count.
+              Each square is one hour of one weekday. Hover over a square to see the number.
             </p>
           </article>
 
           <article class="panel types-card" aria-labelledby="types-title">
             <div class="panel-heading">
               <div>
-                <p class="panel-label">Crime mix</p>
-                <h3 id="types-title">Top offence types</h3>
+                <p class="panel-label">Type of crime</p>
+                <h3 id="types-title">What kinds of crime?</h3>
                 <p class="panel-sub" id="types-subtitle">—</p>
               </div>
             </div>
             <div class="types-key" aria-hidden="true">
-              <span><i class="key-bar"></i> District share</span>
-              <span><i class="key-tick"></i> Citywide share</span>
+              <span><i class="key-bar"></i> This district</span>
+              <span><i class="key-tick"></i> Whole city</span>
             </div>
             <div id="type-chart" class="type-chart"></div>
             <p class="chart-note">
-              Click a type to colour the map by that offence.
+              Bars show how much of this district's crime each type makes up. The orange line shows the same for the whole city. Click a type to colour the map by it.
               <button type="button" id="type-reset" class="inline-button" hidden>Show all crimes</button>
             </p>
           </article>
@@ -237,19 +237,19 @@
           <article class="panel forecast-card panel--wide" aria-labelledby="forecast-title">
             <div class="panel-heading">
               <div>
-                <p class="panel-label">Forecasting</p>
-                <h3 id="forecast-title">Weekly citywide counts and model accuracy</h3>
-                <p class="panel-sub">156 weeks · first 80% used for training, last 20% held out for testing</p>
+                <p class="panel-label">Predicting ahead</p>
+                <h3 id="forecast-title">Can crime levels be predicted?</h3>
+                <p class="panel-sub">Reports per week across the whole city. Four methods learned from the first 2½ years and then tried to predict the last 30 weeks.</p>
               </div>
             </div>
             <div class="forecast-grid">
               <div class="chart-wrap chart-wrap--weekly">
-                <canvas id="weekly-chart" aria-label="Weekly citywide reported crime with the test window and selected model error band"></canvas>
+                <canvas id="weekly-chart" aria-label="Reports per week across Chicago, with the prediction period and the chosen method's typical error"></canvas>
               </div>
-              <div class="model-list" id="model-list" role="list" aria-label="Forecast model comparison"></div>
+              <div class="model-list" id="model-list" role="list" aria-label="How accurate each prediction method was"></div>
             </div>
             <p class="chart-note" id="forecast-note">
-              Select a model to overlay its typical error (±RMSE) on the held-out weeks. Errors are from the accompanying report.
+              Pick a method to see how far off its predictions typically were. Lower numbers are better.
             </p>
           </article>
         </div>
@@ -257,31 +257,32 @@
 
       <section class="method" id="method" aria-labelledby="method-title">
         <div class="section-heading">
-          <p class="section-index">03 · Method & sources</p>
-          <h2 id="method-title">Read the map carefully</h2>
+          <p class="section-index">03 · About the data</p>
+          <h2 id="method-title">A few things to keep in mind</h2>
         </div>
         <div class="method-grid">
           <div>
-            <h3>What a count means</h3>
+            <h3>What is being counted</h3>
             <p>
-              Values represent records in the City of Chicago’s reported-crime dataset,
-              aggregated by police district, month, hour and weekday, and primary offence
-              type for 2022–2024. Forecast errors are taken from the accompanying report.
+              Every number is a count of crimes reported to the Chicago Police Department
+              between 2022 and 2024, using the city’s public dataset. A “report” is one
+              recorded incident, whatever its type or outcome.
             </p>
           </div>
           <div>
-            <h3>What it does not mean</h3>
+            <h3>What the numbers can’t tell you</h3>
             <p>
-              The map does not adjust for district population, area, reporting behaviour,
-              or exposure. Comparisons should be treated as incident counts rather than risk.
+              Districts differ in size, population and how readily people report crime.
+              A district with more reports is not necessarily more dangerous for any one
+              person, and some crimes are never reported at all.
             </p>
           </div>
           <div>
-            <h3>Sources</h3>
+            <h3>Where the data comes from</h3>
             <p>
-              <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2" rel="noreferrer">Crimes — 2001 to Present</a><br />
+              <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2" rel="noreferrer">City of Chicago crime data</a><br />
               <a href="https://data.cityofchicago.org/Public-Safety/Boundaries-Police-Districts-current-/fthy-xz3r" rel="noreferrer">Police district boundaries</a><br />
-              <a href="https://www.chicagopolice.org/wp-content/uploads/2024-CPD-Annual-Report-Final-For-Publishing.pdf" rel="noreferrer">Official district names</a><br />
+              <a href="https://www.chicagopolice.org/wp-content/uploads/2024-CPD-Annual-Report-Final-For-Publishing.pdf" rel="noreferrer">Chicago Police annual report (district names)</a><br />
             </p>
           </div>
         </div>
@@ -290,16 +291,16 @@
 
     <footer>
       <div>
-        <p>© 2026 Nanxi Lu · Chicago crime spatio-temporal analysis · 2022–2024</p>
+        <p>© 2026 Nanxi Lu · Reported crime in Chicago, 2022–2024</p>
         <p class="footer-meta">
-          Code released under the
+          Free to reuse under the
           <a href="https://github.com/Nanxi-lu/chicago-crime-interactive/blob/main/LICENSE" rel="noreferrer">MIT License</a>.
-          Crime data © City of Chicago, provided under its
+          Crime data belongs to the City of Chicago and is shared under its
           <a href="https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html" rel="noreferrer">open-data terms</a>.
         </p>
       </div>
       <div class="footer-links">
-        <a href="https://github.com/Nanxi-lu/chicago-crime-interactive" rel="noreferrer">Source on GitHub ↗</a>
+        <a href="https://github.com/Nanxi-lu/chicago-crime-interactive" rel="noreferrer">Code on GitHub ↗</a>
         <a href="#top">Back to top ↑</a>
       </div>
     </footer>

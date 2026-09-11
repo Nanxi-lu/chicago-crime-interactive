@@ -964,7 +964,7 @@ select {
 
 .model-metric {
   display: grid;
-  grid-template-columns: 38px 1fr 44px;
+  grid-template-columns: 62px 1fr 44px;
   gap: 10px;
   align-items: center;
   font-size: 0.74rem;
