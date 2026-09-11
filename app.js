@@ -1,5 +1,8 @@
 const DATA_URL = "data/district_monthly.json";
 const BOUNDARIES_URL = "data/police_districts.geojson";
+const HOUR_WEEKDAY_URL = "data/district_hour_weekday.json";
+const TYPES_URL = "data/district_types.json";
+const WEEKLY_URL = "data/weekly_city.json";
 const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const YEARS = [2022, 2023, 2024];
 
@@ -30,6 +33,19 @@ const DISTRICT_NAMES = {
 };
 
 const MAP_RAMP = ["#15334a", "#1a8d8b", "#4be1c9", "#ffb454"];
+const DIVERGING_RAMP = ["#38d6c6", "#173049", "#ffb454"]; // below city · like city · above city
+const WEEKDAY_NAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const WEEKDAY_ORDER = [1, 2, 3, 4, 5, 6, 0]; // Monday first; the data uses 0 = Sunday
+const TOP_TYPES = 12;
+const TRAIN_SHARE = 0.8;
+
+// Out-of-sample errors on weekly citywide counts, from the accompanying report (Table 1).
+const MODELS = [
+  { id: "naive", name: "Naive", detail: "Last week carried forward", rmse: 737, mae: 660 },
+  { id: "arima", name: "ARIMA", detail: "ARIMA(3,1,2), non-seasonal", rmse: 584, mae: 521 },
+  { id: "sarima", name: "SARIMA", detail: "SARIMA(1,1,1)(0,1,0)[52]", rmse: 337, mae: 264 },
+  { id: "rf", name: "Random Forest", detail: "Lags, rolling means, seasonal encodings", rmse: 261, mae: 233 },
+];
 const FILL_DURATION = 700;
 const EASE = d3.easeCubicOut;
 
@@ -43,6 +59,7 @@ const percentFormat = new Intl.NumberFormat("en-US", {
   minimumFractionDigits: 1,
   maximumFractionDigits: 1,
 });
+const ratioFormat = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -51,7 +68,15 @@ const state = {
   boundaries: null,
   selectedDistrict: "7",
   selectedYear: "all",
+  typeFilter: null, // primary crime type used to colour the map, or null for all crimes
+  heatMode: "count", // "count" or "index" (district pattern relative to the city)
+  selectedModel: "rf",
+  hourWeekday: {},
+  types: [],
+  weekly: [],
   chart: null,
+  weeklyChart: null,
+  heat: null,
   shapeSelection: null,
   haloSelection: null,
   sheenSelection: null,
@@ -74,6 +99,27 @@ function districtName(value) {
 
 function districtLabel(value) {
   return `${districtNumber(value)} · ${districtName(value)}`;
+}
+
+function periodLabel(year = state.selectedYear) {
+  return year === "all" ? "2022–2024" : String(year);
+}
+
+function typeLabel(type) {
+  const lower = type.toLowerCase();
+  return lower.charAt(0).toUpperCase() + lower.slice(1);
+}
+
+function typeTotalForDistrict(district, year, type) {
+  return state.types
+    .filter((row) => row.district === districtKey(district) && row.type === type && (year === "all" || row.year === Number(year)))
+    .reduce((sum, row) => sum + row.incidents, 0);
+}
+
+function citywideTypeTotal(year, type) {
+  return state.types
+    .filter((row) => row.type === type && (year === "all" || row.year === Number(year)))
+    .reduce((sum, row) => sum + row.incidents, 0);
 }
 
 function rowsForDistrict(district) {
@@ -100,8 +146,25 @@ function allDistricts() {
   )].sort((a, b) => Number(a) - Number(b));
 }
 
-function getMapTotals(year = state.selectedYear) {
-  return new Map(allDistricts().map((district) => [district, totalForDistrict(district, year)]));
+function getMapTotals(year = state.selectedYear, type = state.typeFilter) {
+  return new Map(allDistricts().map((district) => [
+    district,
+    type ? typeTotalForDistrict(district, year, type) : totalForDistrict(district, year),
+  ]));
+}
+
+// Shared floating tooltip used by the map and the analysis panels.
+const tooltip = document.querySelector("#map-tooltip");
+
+function showTooltip(event, html) {
+  tooltip.innerHTML = html;
+  tooltip.hidden = false;
+  tooltip.style.left = `${Math.min(event.clientX + 14, window.innerWidth - 260)}px`;
+  tooltip.style.top = `${Math.min(event.clientY + 14, window.innerHeight - 100)}px`;
+}
+
+function hideTooltip() {
+  tooltip.hidden = true;
 }
 
 function motionDuration(duration) {
@@ -191,16 +254,18 @@ function updateMap() {
     .ease(EASE)
     .style("opacity", (feature) => (isSelected(feature) ? 1 : 0));
 
-  document.querySelector("#map-period").textContent =
-    state.selectedYear === "all" ? "2022–2024" : state.selectedYear;
+  document.querySelector("#map-period").textContent = periodLabel();
+  const filterButton = document.querySelector("#map-filter");
+  filterButton.hidden = !state.typeFilter;
+  document.querySelector("#map-filter-label").textContent = state.typeFilter ? typeLabel(state.typeFilter) : "";
 
   state.mapReady = true;
   setText("map-selection-name", districtLabel(state.selectedDistrict));
   setText(
     "map-selection-total",
-    `${numberFormat.format(totals.get(state.selectedDistrict) ?? 0)} incidents · ${
-      state.selectedYear === "all" ? "2022–2024" : state.selectedYear
-    }`,
+    `${numberFormat.format(totals.get(state.selectedDistrict) ?? 0)} ${
+      state.typeFilter ? `${typeLabel(state.typeFilter).toLowerCase()} incidents` : "incidents"
+    } · ${periodLabel()}`,
   );
 }
 
@@ -229,7 +294,7 @@ function updateTrend() {
   const change = baseline > 0 ? ((totalsByYear.get(2024) - baseline) / baseline) * 100 : null;
 
   const cityTotal = citywideTotal();
-  const ranked = [...getMapTotals("all").entries()].sort((a, b) => b[1] - a[1]);
+  const ranked = [...getMapTotals("all", null).entries()].sort((a, b) => b[1] - a[1]);
   const rank = ranked.findIndex(([district]) => district === state.selectedDistrict) + 1;
 
   setText("district-number", `District ${districtNumber(state.selectedDistrict)}`);
@@ -336,6 +401,13 @@ function selectDistrict(district) {
   document.querySelector("#district-select").value = normalized;
   updateMap();
   updateTrend();
+  updateAnalysis();
+}
+
+function setTypeFilter(type) {
+  state.typeFilter = state.typeFilter === type ? null : type;
+  updateMap();
+  updateTypes();
 }
 
 function renderMap() {
@@ -377,7 +449,6 @@ function renderMap() {
     state.boundaries,
   );
   const path = d3.geoPath(projection);
-  const tooltip = document.querySelector("#map-tooltip");
   const features = state.boundaries.features;
   const namedFeatures = features.filter((feature) => rowsForDistrict(feature.properties.dist_num).length);
 
@@ -411,20 +482,21 @@ function renderMap() {
     })
     .on("pointerenter pointermove", (event, feature) => {
       const district = districtKey(feature.properties.dist_num);
-      const total = totalForDistrict(district);
-      const share = total ? total / citywideTotal(state.selectedYear) : 0;
-      tooltip.innerHTML = total
-        ? `<strong>${districtLabel(district)}</strong>
-           <span>${numberFormat.format(total)} incidents · ${percentFormat.format(share)} of city</span>
-           <em>Click for full details</em>`
-        : `<strong>District ${districtNumber(district)}</strong><span>No linked records</span>`;
-      tooltip.hidden = false;
-      tooltip.style.left = `${Math.min(event.clientX + 14, window.innerWidth - 250)}px`;
-      tooltip.style.top = `${Math.min(event.clientY + 14, window.innerHeight - 90)}px`;
+      const totals = getMapTotals();
+      if (!totals.has(district)) {
+        showTooltip(event, `<strong>District ${districtNumber(district)}</strong><span>No linked records</span>`);
+        return;
+      }
+      const total = totals.get(district);
+      const cityTotal = state.typeFilter
+        ? citywideTypeTotal(state.selectedYear, state.typeFilter)
+        : citywideTotal(state.selectedYear);
+      const what = state.typeFilter ? `${typeLabel(state.typeFilter).toLowerCase()} incidents` : "incidents";
+      showTooltip(event, `<strong>${districtLabel(district)}</strong>
+        <span>${numberFormat.format(total)} ${what} · ${percentFormat.format(cityTotal ? total / cityTotal : 0)} of city</span>
+        <em>Click for full details</em>`);
     })
-    .on("pointerleave", () => {
-      tooltip.hidden = true;
-    });
+    .on("pointerleave", hideTooltip);
 
   state.sheenSelection = svg
     .append("g")
@@ -484,38 +556,481 @@ function setupControls() {
         candidate.setAttribute("aria-pressed", String(isActive));
       });
       updateMap();
+      updateAnalysis();
+    });
+  });
+
+  document.querySelector("#map-filter").addEventListener("click", () => setTypeFilter(null));
+  document.querySelector("#type-reset").addEventListener("click", () => setTypeFilter(null));
+
+  document.querySelectorAll("#heat-mode .mode-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.heatMode = button.dataset.mode;
+      document.querySelectorAll("#heat-mode .mode-button").forEach((candidate) => {
+        const isActive = candidate === button;
+        candidate.classList.toggle("is-active", isActive);
+        candidate.setAttribute("aria-pressed", String(isActive));
+      });
+      updateHeatmap();
     });
   });
 }
 
-function setupImageDialog() {
-  const dialog = document.querySelector("#image-dialog");
-  const image = document.querySelector("#dialog-image");
-  const caption = document.querySelector("#dialog-caption");
 
-  document.querySelectorAll(".image-button").forEach((button) => {
-    button.addEventListener("click", () => {
-      image.src = button.dataset.image;
-      image.alt = button.dataset.caption;
-      caption.textContent = button.dataset.caption;
-      dialog.showModal();
+/* ---------- Analysis panels ---------- */
+
+function updateAnalysis() {
+  updateHeatmap();
+  updateTypes();
+}
+
+// Hour x weekday grid for a district (or the whole city) over the selected period.
+function hourWeekdayGrid(district) {
+  const grid = Array.from({ length: 7 }, () => Array(24).fill(0));
+  const sources = district === "city" ? Object.values(state.hourWeekday) : [state.hourWeekday[district] ?? {}];
+  for (const byYear of sources) {
+    for (const [year, cells] of Object.entries(byYear)) {
+      if (state.selectedYear !== "all" && Number(year) !== Number(state.selectedYear)) continue;
+      for (let dow = 0; dow < 7; dow += 1) {
+        for (let hour = 0; hour < 24; hour += 1) grid[dow][hour] += cells[dow][hour];
+      }
+    }
+  }
+  return grid;
+}
+
+function renderHeatmap() {
+  const container = document.querySelector("#heatmap");
+  const margin = { top: 34, right: 54, bottom: 26, left: 40 };
+  const width = 760;
+  const cell = 30;
+  const gap = 3;
+  const height = margin.top + 7 * cell + margin.bottom;
+  const inner = width - margin.left - margin.right;
+  const x = d3.scaleBand().domain(d3.range(24)).range([0, inner]).paddingInner(gap / cell);
+  const y = d3.scaleBand().domain(WEEKDAY_ORDER).range([0, 7 * cell]).paddingInner(gap / cell);
+
+  const svg = d3
+    .select(container)
+    .append("svg")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("class", "heatmap-svg");
+  const group = svg.append("g").attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+  // Column totals sit above the grid as small bars; row totals as text on the right.
+  const columnBars = group
+    .append("g")
+    .attr("class", "heat-column-bars")
+    .selectAll("rect")
+    .data(d3.range(24))
+    .join("rect")
+    .attr("x", (hour) => x(hour))
+    .attr("width", x.bandwidth())
+    .attr("y", -6)
+    .attr("height", 0);
+
+  const cells = group
+    .append("g")
+    .selectAll("rect")
+    .data(d3.cross(WEEKDAY_ORDER, d3.range(24)).map(([dow, hour]) => ({ dow, hour })))
+    .join("rect")
+    .attr("class", "heat-cell")
+    .attr("x", (d) => x(d.hour))
+    .attr("y", (d) => y(d.dow))
+    .attr("width", x.bandwidth())
+    .attr("height", y.bandwidth())
+    .attr("rx", 4)
+    .attr("fill", "#18283a")
+    .on("pointerenter pointermove", (event, d) => {
+      const { district, city, districtTotal, cityTotal } = state.heat.current;
+      const count = district[d.dow][d.hour];
+      const share = districtTotal ? count / districtTotal : 0;
+      const cityShare = cityTotal ? city[d.dow][d.hour] / cityTotal : 0;
+      const ratio = cityShare ? share / cityShare : 0;
+      const hourLabel = `${String(d.hour).padStart(2, "0")}:00–${String((d.hour + 1) % 24).padStart(2, "0")}:00`;
+      showTooltip(event, `<strong>${WEEKDAY_NAMES[d.dow]} ${hourLabel}</strong>
+        <span>${numberFormat.format(count)} incidents · ${percentFormat.format(share)} of the district's week</span>
+        <em>${ratio ? `${ratioFormat.format(ratio)}× the citywide pattern` : "No citywide comparison"}</em>`);
+      rowLabels.classed("is-active", (dow) => dow === d.dow);
+      columnLabels.classed("is-active", (hour) => hour === d.hour);
+    })
+    .on("pointerleave", () => {
+      hideTooltip();
+      rowLabels.classed("is-active", false);
+      columnLabels.classed("is-active", false);
     });
+
+  const rowLabels = group
+    .append("g")
+    .selectAll("text")
+    .data(WEEKDAY_ORDER)
+    .join("text")
+    .attr("class", "heat-axis")
+    .attr("x", -10)
+    .attr("y", (dow) => y(dow) + y.bandwidth() / 2)
+    .attr("dy", "0.35em")
+    .attr("text-anchor", "end")
+    .text((dow) => WEEKDAY_NAMES[dow]);
+
+  const rowTotals = group
+    .append("g")
+    .selectAll("text")
+    .data(WEEKDAY_ORDER)
+    .join("text")
+    .attr("class", "heat-total")
+    .attr("x", inner + 10)
+    .attr("y", (dow) => y(dow) + y.bandwidth() / 2)
+    .attr("dy", "0.35em");
+
+  const columnLabels = group
+    .append("g")
+    .selectAll("text")
+    .data(d3.range(24))
+    .join("text")
+    .attr("class", "heat-axis heat-axis--hour")
+    .attr("x", (hour) => x(hour) + x.bandwidth() / 2)
+    .attr("y", 7 * cell + 16)
+    .attr("text-anchor", "middle")
+    .text((hour) => (hour % 3 === 0 ? `${String(hour).padStart(2, "0")}` : ""));
+
+  state.heat = { cells, columnBars, rowTotals, current: null };
+  updateHeatmap();
+}
+
+function updateHeatmap() {
+  if (!state.heat) return;
+  const district = hourWeekdayGrid(state.selectedDistrict);
+  const city = hourWeekdayGrid("city");
+  const districtTotal = d3.sum(district.flat());
+  const cityTotal = d3.sum(city.flat());
+  state.heat.current = { district, city, districtTotal, cityTotal };
+
+  const duration = motionDuration(600);
+  let fill;
+  if (state.heatMode === "index") {
+    // log2 ratio of the district's share of the week vs the city's share, clamped to 0.5x–2x.
+    const color = d3.scaleDiverging(d3.interpolateRgbBasis(DIVERGING_RAMP)).domain([-1, 0, 1]);
+    fill = (d) => {
+      const share = districtTotal ? district[d.dow][d.hour] / districtTotal : 0;
+      const cityShare = cityTotal ? city[d.dow][d.hour] / cityTotal : 0;
+      if (!share || !cityShare) return "#18283a";
+      return color(Math.max(-1, Math.min(1, Math.log2(share / cityShare))));
+    };
+    document.querySelector("#heat-ramp").style.background = `linear-gradient(90deg, ${DIVERGING_RAMP.join(", ")})`;
+    document.querySelector("#heat-legend-low").textContent = "½× city";
+    document.querySelector("#heat-legend-high").textContent = "2× city";
+    document.querySelector("#heat-note").textContent =
+      "Each cell compares the district's share of its week with the city's share of the same hour. Amber hours are relatively busier here than citywide.";
+  } else {
+    // Cap the scale at the 95th percentile so the midnight spike (incidents logged
+    // without a precise time default to 00:00) does not flatten every other hour.
+    const cap = d3.quantile(district.flat().sort(d3.ascending), 0.95) || 1;
+    const color = d3.scaleSequential(d3.interpolateRgbBasis(MAP_RAMP)).domain([0, cap]).clamp(true);
+    fill = (d) => color(district[d.dow][d.hour]);
+    document.querySelector("#heat-ramp").style.background = `linear-gradient(90deg, ${MAP_RAMP.join(", ")})`;
+    document.querySelector("#heat-legend-low").textContent = "Fewer";
+    document.querySelector("#heat-legend-high").textContent = "More";
+    document.querySelector("#heat-note").textContent =
+      "Local time of the reported incident; bars above show the hourly total. Midnight is inflated by reports logged without a precise time. Colour is capped at the 95th percentile.";
+  }
+
+  state.heat.cells.transition().duration(duration).ease(EASE).attr("fill", fill);
+
+  const hourTotals = d3.range(24).map((hour) => d3.sum(district.map((row) => row[hour])));
+  const barScale = d3.scaleLinear().domain([0, d3.max(hourTotals) || 1]).range([0, 22]);
+  state.heat.columnBars
+    .transition()
+    .duration(duration)
+    .ease(EASE)
+    .attr("y", (hour) => -6 - barScale(hourTotals[hour]))
+    .attr("height", (hour) => barScale(hourTotals[hour]));
+
+  state.heat.rowTotals.text((dow) => compactFormat.format(d3.sum(district[dow])));
+
+  document.querySelector("#heat-subtitle").textContent =
+    `${districtLabel(state.selectedDistrict)} · ${periodLabel()} · ${numberFormat.format(districtTotal)} incidents`;
+}
+
+function updateTypes() {
+  const district = state.selectedDistrict;
+  const year = state.selectedYear;
+  const inPeriod = (row) => year === "all" || row.year === Number(year);
+  const districtCounts = d3.rollup(
+    state.types.filter((row) => row.district === district && inPeriod(row)),
+    (rows) => d3.sum(rows, (row) => row.incidents),
+    (row) => row.type,
+  );
+  const cityCounts = d3.rollup(
+    state.types.filter(inPeriod),
+    (rows) => d3.sum(rows, (row) => row.incidents),
+    (row) => row.type,
+  );
+  const districtTotal = d3.sum(districtCounts.values());
+  const cityTotal = d3.sum(cityCounts.values());
+
+  const rows = [...districtCounts.entries()]
+    .map(([type, count]) => ({
+      type,
+      count,
+      share: districtTotal ? count / districtTotal : 0,
+      cityShare: cityTotal ? (cityCounts.get(type) ?? 0) / cityTotal : 0,
+    }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, TOP_TYPES);
+  // Keep the filtered type visible even when it falls outside the top list.
+  if (state.typeFilter && !rows.some((row) => row.type === state.typeFilter)) {
+    const count = districtCounts.get(state.typeFilter) ?? 0;
+    rows.push({
+      type: state.typeFilter,
+      count,
+      share: districtTotal ? count / districtTotal : 0,
+      cityShare: cityTotal ? (cityCounts.get(state.typeFilter) ?? 0) / cityTotal : 0,
+    });
+  }
+
+  const maxShare = d3.max(rows, (row) => Math.max(row.share, row.cityShare)) || 1;
+  const duration = motionDuration(600);
+
+  const items = d3
+    .select("#type-chart")
+    .selectAll(".type-row")
+    .data(rows, (row) => row.type)
+    .join(
+      (enter) => {
+        const row = enter.append("button").attr("type", "button").attr("class", "type-row");
+        row.append("span").attr("class", "type-name");
+        const track = row.append("span").attr("class", "type-track");
+        track.append("span").attr("class", "type-bar").style("width", "0%");
+        track.append("span").attr("class", "type-tick").style("left", "0%");
+        row.append("span").attr("class", "type-count");
+        return row;
+      },
+      (update) => update,
+      (exit) => exit.remove(),
+    )
+    .classed("is-selected", (row) => row.type === state.typeFilter)
+    .attr("aria-pressed", (row) => row.type === state.typeFilter)
+    .on("click", (_, row) => setTypeFilter(row.type))
+    .on("pointerenter pointermove", (event, row) => {
+      const ratio = row.cityShare ? row.share / row.cityShare : 0;
+      showTooltip(event, `<strong>${typeLabel(row.type)}</strong>
+        <span>${numberFormat.format(row.count)} incidents · ${percentFormat.format(row.share)} of the district</span>
+        <span>Citywide: ${percentFormat.format(row.cityShare)}${ratio ? ` · ${ratioFormat.format(ratio)}× the city share` : ""}</span>
+        <em>${row.type === state.typeFilter ? "Click to show all crimes" : "Click to colour the map"}</em>`);
+    })
+    .on("pointerleave", hideTooltip);
+
+  items.order();
+  items.select(".type-name").text((row) => typeLabel(row.type));
+  items.select(".type-count").text((row) => numberFormat.format(row.count));
+  items
+    .select(".type-bar")
+    .transition()
+    .duration(duration)
+    .ease(EASE)
+    .style("width", (row) => `${(row.share / maxShare) * 100}%`);
+  items
+    .select(".type-tick")
+    .transition()
+    .duration(duration)
+    .ease(EASE)
+    .style("left", (row) => `${(row.cityShare / maxShare) * 100}%`);
+
+  document.querySelector("#types-subtitle").textContent =
+    `${districtLabel(district)} · ${periodLabel()} · top ${Math.min(TOP_TYPES, rows.length)} of ${districtCounts.size} types`;
+  document.querySelector("#type-reset").hidden = !state.typeFilter;
+}
+
+function renderForecast() {
+  // Drop the partial weeks at either end so the series matches the report's ~156 weeks.
+  const weeks = state.weekly.filter((row) => row.week >= "2022-01-03" && row.week <= "2024-12-23");
+  const trainSize = Math.floor(weeks.length * TRAIN_SHARE);
+  const labels = weeks.map((row) => row.week);
+  const values = weeks.map((row) => row.incidents);
+
+  const context = document.querySelector("#weekly-chart").getContext("2d");
+  const testWindow = {
+    id: "testWindow",
+    beforeDatasetsDraw(chart) {
+      const { ctx, chartArea, scales } = chart;
+      const start = scales.x.getPixelForValue(trainSize - 0.5);
+      ctx.save();
+      ctx.fillStyle = "rgba(255, 180, 84, 0.07)";
+      ctx.fillRect(start, chartArea.top, chartArea.right - start, chartArea.bottom - chartArea.top);
+      ctx.strokeStyle = "rgba(255, 180, 84, 0.45)";
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(start, chartArea.top);
+      ctx.lineTo(start, chartArea.bottom);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = "#ffb454";
+      ctx.font = "700 11px ui-monospace, SFMono-Regular, Menlo, monospace";
+      ctx.textAlign = "left";
+      ctx.fillText("TEST WEEKS", start + 8, chartArea.top + 14);
+      ctx.textAlign = "right";
+      ctx.fillStyle = "#6f8497";
+      ctx.fillText("TRAINING", start - 8, chartArea.top + 14);
+      ctx.restore();
+    },
+  };
+
+  state.weeklyChart = new Chart(context, {
+    type: "line",
+    plugins: [testWindow],
+    data: {
+      labels,
+      datasets: [
+        {
+          label: "Observed",
+          data: values,
+          borderColor: "#38d6c6",
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: "#ffb454",
+          pointHoverBorderColor: "#07111f",
+          pointHoverBorderWidth: 2,
+          tension: 0.25,
+          order: 1,
+        },
+        {
+          label: "Upper error band",
+          data: [],
+          borderWidth: 0,
+          pointRadius: 0,
+          pointHoverRadius: 0,
+          backgroundColor: "rgba(255, 180, 84, 0.18)",
+          fill: "+1",
+          tension: 0.25,
+          order: 2,
+        },
+        {
+          label: "Lower error band",
+          data: [],
+          borderWidth: 0,
+          pointRadius: 0,
+          pointHoverRadius: 0,
+          tension: 0.25,
+          order: 3,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: { duration: motionDuration(650), easing: "easeOutCubic" },
+      interaction: { intersect: false, mode: "index" },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          displayColors: false,
+          backgroundColor: "rgba(4, 10, 19, 0.95)",
+          borderColor: "rgba(180, 210, 230, 0.24)",
+          borderWidth: 1,
+          padding: 12,
+          filter: (item) => item.datasetIndex === 0,
+          callbacks: {
+            title: (items) => `Week of ${items[0].label}`,
+            label: (item) => `${numberFormat.format(item.raw)} reported incidents citywide`,
+            afterLabel: (item) => (item.dataIndex >= trainSize ? "Held-out test week" : "Training week"),
+          },
+        },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          border: { color: "rgba(180, 210, 230, 0.15)" },
+          ticks: {
+            color: "#6f8497",
+            maxRotation: 0,
+            autoSkip: false,
+            // Label the first week of each quarter.
+            callback(value) {
+              const month = labels[value].slice(5, 7);
+              if (labels[value - 1]?.slice(5, 7) === month) return "";
+              return ["01", "04", "07", "10"].includes(month)
+                ? `${MONTH_NAMES[Number(month) - 1]} ${labels[value].slice(2, 4)}`
+                : "";
+            },
+          },
+        },
+        y: {
+          beginAtZero: false,
+          border: { display: false },
+          grid: { color: "rgba(180, 210, 230, 0.1)" },
+          ticks: { color: "#6f8497", callback: (value) => compactFormat.format(value) },
+        },
+      },
+    },
   });
 
-  document.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
-  dialog.addEventListener("click", (event) => {
-    if (event.target === dialog) dialog.close();
-  });
+  const list = d3.select("#model-list");
+  const maxError = d3.max(MODELS, (model) => model.rmse);
+  const rows = list
+    .selectAll(".model-row")
+    .data(MODELS)
+    .join("button")
+    .attr("type", "button")
+    .attr("class", "model-row")
+    .attr("role", "listitem")
+    .on("click", (_, model) => {
+      state.selectedModel = model.id;
+      updateForecast();
+    })
+    .on("pointerenter pointermove", (event, model) => {
+      showTooltip(event, `<strong>${model.name}</strong>
+        <span>${model.detail}</span>
+        <span>RMSE ${numberFormat.format(model.rmse)} · MAE ${numberFormat.format(model.mae)} incidents per week</span>
+        <em>${model.id === state.selectedModel ? "Shown on the chart" : "Click to show its error band"}</em>`);
+    })
+    .on("pointerleave", hideTooltip);
+
+  rows.html((model) => `
+    <span class="model-head">
+      <span class="model-name">${model.name}</span>
+      <span class="model-rank"></span>
+    </span>
+    <span class="model-metric"><span class="model-metric-label">RMSE</span>
+      <span class="model-track"><span class="model-bar model-bar--rmse" style="width:${(model.rmse / maxError) * 100}%"></span></span>
+      <span class="model-value">${numberFormat.format(model.rmse)}</span></span>
+    <span class="model-metric"><span class="model-metric-label">MAE</span>
+      <span class="model-track"><span class="model-bar model-bar--mae" style="width:${(model.mae / maxError) * 100}%"></span></span>
+      <span class="model-value">${numberFormat.format(model.mae)}</span></span>
+  `);
+  const ranked = [...MODELS].sort((a, b) => a.rmse - b.rmse).map((model) => model.id);
+  rows.select(".model-rank").text((model) => (ranked[0] === model.id ? "Best" : `#${ranked.indexOf(model.id) + 1}`));
+
+  state.forecast = { weeks, trainSize, values, rows };
+  updateForecast();
+}
+
+function updateForecast() {
+  const { trainSize, values, rows } = state.forecast;
+  const model = MODELS.find((candidate) => candidate.id === state.selectedModel);
+  rows.classed("is-selected", (candidate) => candidate.id === model.id)
+    .attr("aria-pressed", (candidate) => candidate.id === model.id);
+
+  const upper = values.map((value, index) => (index >= trainSize ? value + model.rmse : null));
+  const lower = values.map((value, index) => (index >= trainSize ? Math.max(0, value - model.rmse) : null));
+  state.weeklyChart.data.datasets[1].data = upper;
+  state.weeklyChart.data.datasets[2].data = lower;
+  state.weeklyChart.update();
+
+  document.querySelector("#forecast-note").textContent =
+    `${model.name}: forecasts on the held-out weeks were typically within ±${numberFormat.format(model.rmse)} incidents (RMSE) of the observed count. Errors are from the accompanying report.`;
 }
 
 async function initialise() {
-  setupImageDialog();
   try {
-    const [rowsResponse, boundariesResponse] = await Promise.all([
-      fetch(DATA_URL),
-      fetch(BOUNDARIES_URL),
-    ]);
-    if (!rowsResponse.ok || !boundariesResponse.ok) throw new Error("Data request failed");
+    const responses = await Promise.all(
+      [DATA_URL, BOUNDARIES_URL, HOUR_WEEKDAY_URL, TYPES_URL, WEEKLY_URL].map((url) => fetch(url)),
+    );
+    if (responses.some((response) => !response.ok)) throw new Error("Data request failed");
+    const [rowsResponse, boundariesResponse, hourWeekdayResponse, typesResponse, weeklyResponse] = responses;
+    state.hourWeekday = await hourWeekdayResponse.json();
+    state.types = (await typesResponse.json()).map((row) => ({ ...row, district: districtKey(row.district) }));
+    state.weekly = await weeklyResponse.json();
 
     state.rows = (await rowsResponse.json()).map((row) => ({
       district: districtKey(row.district),
@@ -532,6 +1047,9 @@ async function initialise() {
     setupControls();
     renderMap();
     updateTrend();
+    renderHeatmap();
+    renderForecast();
+    updateAnalysis();
     document.querySelector("#loading-state").hidden = true;
   } catch (error) {
     console.error(error);

@@ -1,0 +1,634 @@
+[
+  {
+    "week": "2021-12-27",
+    "incidents": 1303
+  },
+  {
+    "week": "2022-01-03",
+    "incidents": 3124
+  },
+  {
+    "week": "2022-01-10",
+    "incidents": 3694
+  },
+  {
+    "week": "2022-01-17",
+    "incidents": 3693
+  },
+  {
+    "week": "2022-01-24",
+    "incidents": 3485
+  },
+  {
+    "week": "2022-01-31",
+    "incidents": 3630
+  },
+  {
+    "week": "2022-02-07",
+    "incidents": 3942
+  },
+  {
+    "week": "2022-02-14",
+    "incidents": 3852
+  },
+  {
+    "week": "2022-02-21",
+    "incidents": 3856
+  },
+  {
+    "week": "2022-02-28",
+    "incidents": 4273
+  },
+  {
+    "week": "2022-03-07",
+    "incidents": 4015
+  },
+  {
+    "week": "2022-03-14",
+    "incidents": 4260
+  },
+  {
+    "week": "2022-03-21",
+    "incidents": 4187
+  },
+  {
+    "week": "2022-03-28",
+    "incidents": 4299
+  },
+  {
+    "week": "2022-04-04",
+    "incidents": 4173
+  },
+  {
+    "week": "2022-04-11",
+    "incidents": 4076
+  },
+  {
+    "week": "2022-04-18",
+    "incidents": 4305
+  },
+  {
+    "week": "2022-04-25",
+    "incidents": 4306
+  },
+  {
+    "week": "2022-05-02",
+    "incidents": 4187
+  },
+  {
+    "week": "2022-05-09",
+    "incidents": 4675
+  },
+  {
+    "week": "2022-05-16",
+    "incidents": 4586
+  },
+  {
+    "week": "2022-05-23",
+    "incidents": 4662
+  },
+  {
+    "week": "2022-05-30",
+    "incidents": 4862
+  },
+  {
+    "week": "2022-06-06",
+    "incidents": 4675
+  },
+  {
+    "week": "2022-06-13",
+    "incidents": 4939
+  },
+  {
+    "week": "2022-06-20",
+    "incidents": 4950
+  },
+  {
+    "week": "2022-06-27",
+    "incidents": 5337
+  },
+  {
+    "week": "2022-07-04",
+    "incidents": 4745
+  },
+  {
+    "week": "2022-07-11",
+    "incidents": 4812
+  },
+  {
+    "week": "2022-07-18",
+    "incidents": 5025
+  },
+  {
+    "week": "2022-07-25",
+    "incidents": 5374
+  },
+  {
+    "week": "2022-08-01",
+    "incidents": 5287
+  },
+  {
+    "week": "2022-08-08",
+    "incidents": 5030
+  },
+  {
+    "week": "2022-08-15",
+    "incidents": 4857
+  },
+  {
+    "week": "2022-08-22",
+    "incidents": 5069
+  },
+  {
+    "week": "2022-08-29",
+    "incidents": 5398
+  },
+  {
+    "week": "2022-09-05",
+    "incidents": 5271
+  },
+  {
+    "week": "2022-09-12",
+    "incidents": 5083
+  },
+  {
+    "week": "2022-09-19",
+    "incidents": 5237
+  },
+  {
+    "week": "2022-09-26",
+    "incidents": 5289
+  },
+  {
+    "week": "2022-10-03",
+    "incidents": 5048
+  },
+  {
+    "week": "2022-10-10",
+    "incidents": 5114
+  },
+  {
+    "week": "2022-10-17",
+    "incidents": 5390
+  },
+  {
+    "week": "2022-10-24",
+    "incidents": 5369
+  },
+  {
+    "week": "2022-10-31",
+    "incidents": 5498
+  },
+  {
+    "week": "2022-11-07",
+    "incidents": 4918
+  },
+  {
+    "week": "2022-11-14",
+    "incidents": 4484
+  },
+  {
+    "week": "2022-11-21",
+    "incidents": 4705
+  },
+  {
+    "week": "2022-11-28",
+    "incidents": 5010
+  },
+  {
+    "week": "2022-12-05",
+    "incidents": 5040
+  },
+  {
+    "week": "2022-12-12",
+    "incidents": 4587
+  },
+  {
+    "week": "2022-12-19",
+    "incidents": 3751
+  },
+  {
+    "week": "2022-12-26",
+    "incidents": 4907
+  },
+  {
+    "week": "2023-01-02",
+    "incidents": 4832
+  },
+  {
+    "week": "2023-01-09",
+    "incidents": 5001
+  },
+  {
+    "week": "2023-01-16",
+    "incidents": 4872
+  },
+  {
+    "week": "2023-01-23",
+    "incidents": 4408
+  },
+  {
+    "week": "2023-01-30",
+    "incidents": 4498
+  },
+  {
+    "week": "2023-02-06",
+    "incidents": 4771
+  },
+  {
+    "week": "2023-02-13",
+    "incidents": 4668
+  },
+  {
+    "week": "2023-02-20",
+    "incidents": 4399
+  },
+  {
+    "week": "2023-02-27",
+    "incidents": 4656
+  },
+  {
+    "week": "2023-03-06",
+    "incidents": 4531
+  },
+  {
+    "week": "2023-03-13",
+    "incidents": 4643
+  },
+  {
+    "week": "2023-03-20",
+    "incidents": 4840
+  },
+  {
+    "week": "2023-03-27",
+    "incidents": 5041
+  },
+  {
+    "week": "2023-04-03",
+    "incidents": 4791
+  },
+  {
+    "week": "2023-04-10",
+    "incidents": 5119
+  },
+  {
+    "week": "2023-04-17",
+    "incidents": 4770
+  },
+  {
+    "week": "2023-04-24",
+    "incidents": 4620
+  },
+  {
+    "week": "2023-05-01",
+    "incidents": 4804
+  },
+  {
+    "week": "2023-05-08",
+    "incidents": 4955
+  },
+  {
+    "week": "2023-05-15",
+    "incidents": 5087
+  },
+  {
+    "week": "2023-05-22",
+    "incidents": 5305
+  },
+  {
+    "week": "2023-05-29",
+    "incidents": 5394
+  },
+  {
+    "week": "2023-06-05",
+    "incidents": 5092
+  },
+  {
+    "week": "2023-06-12",
+    "incidents": 5148
+  },
+  {
+    "week": "2023-06-19",
+    "incidents": 5501
+  },
+  {
+    "week": "2023-06-26",
+    "incidents": 5443
+  },
+  {
+    "week": "2023-07-03",
+    "incidents": 5543
+  },
+  {
+    "week": "2023-07-10",
+    "incidents": 5430
+  },
+  {
+    "week": "2023-07-17",
+    "incidents": 5393
+  },
+  {
+    "week": "2023-07-24",
+    "incidents": 5366
+  },
+  {
+    "week": "2023-07-31",
+    "incidents": 5930
+  },
+  {
+    "week": "2023-08-07",
+    "incidents": 5495
+  },
+  {
+    "week": "2023-08-14",
+    "incidents": 5250
+  },
+  {
+    "week": "2023-08-21",
+    "incidents": 5389
+  },
+  {
+    "week": "2023-08-28",
+    "incidents": 5576
+  },
+  {
+    "week": "2023-09-04",
+    "incidents": 5284
+  },
+  {
+    "week": "2023-09-11",
+    "incidents": 5051
+  },
+  {
+    "week": "2023-09-18",
+    "incidents": 5268
+  },
+  {
+    "week": "2023-09-25",
+    "incidents": 5445
+  },
+  {
+    "week": "2023-10-02",
+    "incidents": 5219
+  },
+  {
+    "week": "2023-10-09",
+    "incidents": 5098
+  },
+  {
+    "week": "2023-10-16",
+    "incidents": 5191
+  },
+  {
+    "week": "2023-10-23",
+    "incidents": 5391
+  },
+  {
+    "week": "2023-10-30",
+    "incidents": 5229
+  },
+  {
+    "week": "2023-11-06",
+    "incidents": 5049
+  },
+  {
+    "week": "2023-11-13",
+    "incidents": 5074
+  },
+  {
+    "week": "2023-11-20",
+    "incidents": 4689
+  },
+  {
+    "week": "2023-11-27",
+    "incidents": 4977
+  },
+  {
+    "week": "2023-12-04",
+    "incidents": 4826
+  },
+  {
+    "week": "2023-12-11",
+    "incidents": 4807
+  },
+  {
+    "week": "2023-12-18",
+    "incidents": 4917
+  },
+  {
+    "week": "2023-12-25",
+    "incidents": 4605
+  },
+  {
+    "week": "2024-01-01",
+    "incidents": 5043
+  },
+  {
+    "week": "2024-01-08",
+    "incidents": 4031
+  },
+  {
+    "week": "2024-01-15",
+    "incidents": 3839
+  },
+  {
+    "week": "2024-01-22",
+    "incidents": 4678
+  },
+  {
+    "week": "2024-01-29",
+    "incidents": 4944
+  },
+  {
+    "week": "2024-02-05",
+    "incidents": 4959
+  },
+  {
+    "week": "2024-02-12",
+    "incidents": 4721
+  },
+  {
+    "week": "2024-02-19",
+    "incidents": 4712
+  },
+  {
+    "week": "2024-02-26",
+    "incidents": 4911
+  },
+  {
+    "week": "2024-03-04",
+    "incidents": 4664
+  },
+  {
+    "week": "2024-03-11",
+    "incidents": 4866
+  },
+  {
+    "week": "2024-03-18",
+    "incidents": 4707
+  },
+  {
+    "week": "2024-03-25",
+    "incidents": 4574
+  },
+  {
+    "week": "2024-04-01",
+    "incidents": 4517
+  },
+  {
+    "week": "2024-04-08",
+    "incidents": 5003
+  },
+  {
+    "week": "2024-04-15",
+    "incidents": 4787
+  },
+  {
+    "week": "2024-04-22",
+    "incidents": 4826
+  },
+  {
+    "week": "2024-04-29",
+    "incidents": 5069
+  },
+  {
+    "week": "2024-05-06",
+    "incidents": 4944
+  },
+  {
+    "week": "2024-05-13",
+    "incidents": 5214
+  },
+  {
+    "week": "2024-05-20",
+    "incidents": 5434
+  },
+  {
+    "week": "2024-05-27",
+    "incidents": 5407
+  },
+  {
+    "week": "2024-06-03",
+    "incidents": 5528
+  },
+  {
+    "week": "2024-06-10",
+    "incidents": 5263
+  },
+  {
+    "week": "2024-06-17",
+    "incidents": 5544
+  },
+  {
+    "week": "2024-06-24",
+    "incidents": 5272
+  },
+  {
+    "week": "2024-07-01",
+    "incidents": 5786
+  },
+  {
+    "week": "2024-07-08",
+    "incidents": 5257
+  },
+  {
+    "week": "2024-07-15",
+    "incidents": 5329
+  },
+  {
+    "week": "2024-07-22",
+    "incidents": 5475
+  },
+  {
+    "week": "2024-07-29",
+    "incidents": 5660
+  },
+  {
+    "week": "2024-08-05",
+    "incidents": 5240
+  },
+  {
+    "week": "2024-08-12",
+    "incidents": 4993
+  },
+  {
+    "week": "2024-08-19",
+    "incidents": 4953
+  },
+  {
+    "week": "2024-08-26",
+    "incidents": 5447
+  },
+  {
+    "week": "2024-09-02",
+    "incidents": 5420
+  },
+  {
+    "week": "2024-09-09",
+    "incidents": 5340
+  },
+  {
+    "week": "2024-09-16",
+    "incidents": 5389
+  },
+  {
+    "week": "2024-09-23",
+    "incidents": 5153
+  },
+  {
+    "week": "2024-09-30",
+    "incidents": 5336
+  },
+  {
+    "week": "2024-10-07",
+    "incidents": 5015
+  },
+  {
+    "week": "2024-10-14",
+    "incidents": 4838
+  },
+  {
+    "week": "2024-10-21",
+    "incidents": 5043
+  },
+  {
+    "week": "2024-10-28",
+    "incidents": 5334
+  },
+  {
+    "week": "2024-11-04",
+    "incidents": 4736
+  },
+  {
+    "week": "2024-11-11",
+    "incidents": 4841
+  },
+  {
+    "week": "2024-11-18",
+    "incidents": 4445
+  },
+  {
+    "week": "2024-11-25",
+    "incidents": 4148
+  },
+  {
+    "week": "2024-12-02",
+    "incidents": 4666
+  },
+  {
+    "week": "2024-12-09",
+    "incidents": 4523
+  },
+  {
+    "week": "2024-12-16",
+    "incidents": 4358
+  },
+  {
+    "week": "2024-12-23",
+    "incidents": 4186
+  },
+  {
+    "week": "2024-12-30",
+    "incidents": 1244
+  }
+]

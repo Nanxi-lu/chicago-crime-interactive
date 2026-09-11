@@ -75,6 +75,10 @@
               <div>
                 <p class="panel-label">Reported incidents</p>
                 <h3 id="map-title">Police districts</h3>
+                <button type="button" id="map-filter" class="map-filter" hidden>
+                  <span id="map-filter-label">Theft</span> <span aria-hidden="true">×</span>
+                  <span class="sr-only">clear crime type filter</span>
+                </button>
               </div>
               <p id="map-period" class="period-label">2022–2024</p>
             </div>
@@ -169,44 +173,74 @@
           <p class="section-index">02 · Analysis views</p>
           <h2 id="analysis-title">Patterns beyond the district map</h2>
           <p>
-            Selected figures from the accompanying analysis show how crime varies
-            across the week, across space, and between forecasting models.
+            Every panel follows the district and period selected above. Hover for
+            exact values, switch the heatmap to compare against the city, and click
+            a crime type to recolour the map by that offence.
           </p>
         </div>
 
-        <div class="figure-grid">
-          <figure class="feature-figure feature-figure--wide">
-            <button class="image-button" type="button" data-image="assets/hour-weekday-heatmap.png" data-caption="Crime counts by hour and weekday">
-              <img src="assets/hour-weekday-heatmap.png" alt="Heatmap of crime counts by hour and weekday" loading="lazy" />
-              <span class="expand-label">View larger</span>
-            </button>
-            <figcaption>
-              <span>Temporal rhythm</span>
-              Crime counts by hour and weekday.
-            </figcaption>
-          </figure>
+        <div class="analysis-grid">
+          <article class="panel heat-card" aria-labelledby="heat-title">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-label">Temporal rhythm</p>
+                <h3 id="heat-title">Incidents by hour and weekday</h3>
+                <p class="panel-sub" id="heat-subtitle">—</p>
+              </div>
+              <fieldset class="mode-switcher" id="heat-mode">
+                <legend>Heatmap mode</legend>
+                <button type="button" class="mode-button is-active" data-mode="count" aria-pressed="true">Counts</button>
+                <button type="button" class="mode-button" data-mode="index" aria-pressed="false">vs. city</button>
+              </fieldset>
+            </div>
+            <div id="heatmap" class="heatmap" role="img" aria-label="Heatmap of incidents by hour of day and weekday"></div>
+            <div class="legend heat-legend" aria-label="Heatmap colour legend">
+              <span id="heat-legend-low">Fewer</span>
+              <span class="legend-ramp" id="heat-ramp" aria-hidden="true"></span>
+              <span id="heat-legend-high">More</span>
+            </div>
+            <p class="chart-note" id="heat-note">
+              Local time of the reported incident. Hover a cell for the exact count.
+            </p>
+          </article>
 
-          <figure class="feature-figure">
-            <button class="image-button" type="button" data-image="assets/spatial-2024.png" data-caption="Spatial distribution of reported crime in 2024">
-              <img src="assets/spatial-2024.png" alt="Map of the spatial distribution of reported crime in 2024" loading="lazy" />
-              <span class="expand-label">View larger</span>
-            </button>
-            <figcaption>
-              <span>Spatial pattern</span>
-              The 2024 distribution used in the report.
-            </figcaption>
-          </figure>
+          <article class="panel types-card" aria-labelledby="types-title">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-label">Crime mix</p>
+                <h3 id="types-title">Top offence types</h3>
+                <p class="panel-sub" id="types-subtitle">—</p>
+              </div>
+            </div>
+            <div class="types-key" aria-hidden="true">
+              <span><i class="key-bar"></i> District share</span>
+              <span><i class="key-tick"></i> Citywide share</span>
+            </div>
+            <div id="type-chart" class="type-chart"></div>
+            <p class="chart-note">
+              Click a type to colour the map by that offence.
+              <button type="button" id="type-reset" class="inline-button" hidden>Show all crimes</button>
+            </p>
+          </article>
 
-          <figure class="feature-figure">
-            <button class="image-button" type="button" data-image="assets/model-comparison.png" data-caption="Forecast model comparison">
-              <img src="assets/model-comparison.png" alt="Comparison of forecasting model performance" loading="lazy" />
-              <span class="expand-label">View larger</span>
-            </button>
-            <figcaption>
-              <span>Forecasting</span>
-              Model performance comparison from the final analysis.
-            </figcaption>
-          </figure>
+          <article class="panel forecast-card panel--wide" aria-labelledby="forecast-title">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-label">Forecasting</p>
+                <h3 id="forecast-title">Weekly citywide counts and model accuracy</h3>
+                <p class="panel-sub">156 weeks · first 80% used for training, last 20% held out for testing</p>
+              </div>
+            </div>
+            <div class="forecast-grid">
+              <div class="chart-wrap chart-wrap--weekly">
+                <canvas id="weekly-chart" aria-label="Weekly citywide reported crime with the test window and selected model error band"></canvas>
+              </div>
+              <div class="model-list" id="model-list" role="list" aria-label="Forecast model comparison"></div>
+            </div>
+            <p class="chart-note" id="forecast-note">
+              Select a model to overlay its typical error (±RMSE) on the held-out weeks. Errors are from the accompanying report.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -219,8 +253,9 @@
           <div>
             <h3>What a count means</h3>
             <p>
-              Values represent records in the City of Chicago’s reported-crime dataset.
-              They are aggregated by the police district field and month for 2022–2024.
+              Values represent records in the City of Chicago’s reported-crime dataset,
+              aggregated by police district, month, hour and weekday, and primary offence
+              type for 2022–2024. Forecast errors are taken from the accompanying report.
             </p>
           </div>
           <div>
@@ -247,11 +282,6 @@
       <a href="#top">Back to top ↑</a>
     </footer>
 
-    <dialog id="image-dialog" aria-labelledby="dialog-caption">
-      <button class="dialog-close" type="button" aria-label="Close image">×</button>
-      <img id="dialog-image" alt="" />
-      <p id="dialog-caption"></p>
-    </dialog>
 
     <div id="map-tooltip" class="map-tooltip" role="tooltip" hidden></div>
   </body>
