@@ -134,9 +134,33 @@ nav a:hover {
 }
 
 .report-link {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
   padding: 9px 14px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
+  color: var(--text);
+  transition: border-color 320ms ease, background 320ms ease;
+}
+
+.report-link:hover {
+  border-color: rgba(56, 214, 198, 0.5);
+  background: rgba(56, 214, 198, 0.08);
+}
+
+.github-mark {
+  flex: none;
+}
+
+.byline {
+  margin: 18px 0 0;
+  color: var(--faint);
+  font-size: 0.86rem;
+}
+
+.byline a {
+  color: var(--cyan-soft);
 }
 
 main,
@@ -1031,6 +1055,22 @@ footer p {
   margin-bottom: 0;
 }
 
+.footer-meta {
+  margin-top: 6px;
+  font-size: 0.78rem;
+}
+
+.footer-meta a {
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  flex: none;
+  gap: 20px;
+  align-items: start;
+}
+
 .map-tooltip {
   position: fixed;
   z-index: 60;
@@ -1170,6 +1210,10 @@ footer p {
 
   footer {
     display: block;
+  }
+
+  .footer-links {
+    margin-top: 16px;
   }
 }
 

@@ -1,5 +1,7 @@
 # Chicago Crime Patterns
 
+By **Nanxi Lu** (CASA, UCL). Live site: https://nanxi-lu.github.io/chicago-crime-interactive/
+
 Interactive GitHub Pages site for exploring reported crime trends across Chicago police districts from 2022 to 2024.
 
 ## Features
@@ -34,3 +36,7 @@ Then open `http://localhost:8000`.
 ## GitHub Pages
 
 Every push to `main` deploys the site via the workflow in `.github/workflows/pages.yml`. Live at https://nanxi-lu.github.io/chicago-crime-interactive/
+
+## Licence
+
+Code in this repository is released under the [MIT License](LICENSE). The crime and boundary data are © City of Chicago and are used under the city's [open-data terms](https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html).
